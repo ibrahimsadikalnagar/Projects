@@ -5,6 +5,8 @@ VisualStudioVersion = 17.10.35122.118
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nieuwe woorden app", "Nieuwe woorden app\Nieuwe woorden app.csproj", "{ADB14610-501B-4375-97C0-46D13CDB686A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fuel consumption calculation", "Fuel consumption calculation\Fuel consumption calculation.csproj", "{7B1A420C-84D0-452C-B3A8-F35CFA2092B7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{ADB14610-501B-4375-97C0-46D13CDB686A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ADB14610-501B-4375-97C0-46D13CDB686A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ADB14610-501B-4375-97C0-46D13CDB686A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B1A420C-84D0-452C-B3A8-F35CFA2092B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B1A420C-84D0-452C-B3A8-F35CFA2092B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B1A420C-84D0-452C-B3A8-F35CFA2092B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B1A420C-84D0-452C-B3A8-F35CFA2092B7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
