@@ -1,0 +1,7 @@
+E:\Repo\Projects\ConsoleDataConnectionSql\bin\Debug\ConsoleDataConnectionSql.exe.config
+E:\Repo\Projects\ConsoleDataConnectionSql\bin\Debug\ConsoleDataConnectionSql.exe
+E:\Repo\Projects\ConsoleDataConnectionSql\bin\Debug\ConsoleDataConnectionSql.pdb
+E:\Repo\Projects\ConsoleDataConnectionSql\obj\Debug\ConsoleDataConnectionSql.csproj.AssemblyReference.cache
+E:\Repo\Projects\ConsoleDataConnectionSql\obj\Debug\ConsoleDataConnectionSql.csproj.CoreCompileInputs.cache
+E:\Repo\Projects\ConsoleDataConnectionSql\obj\Debug\ConsoleDataConnectionSql.exe
+E:\Repo\Projects\ConsoleDataConnectionSql\obj\Debug\ConsoleDataConnectionSql.pdb
