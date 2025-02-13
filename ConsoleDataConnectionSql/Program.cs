@@ -209,7 +209,7 @@ namespace ConsoleDataConnectionSql
             string query = "\r\nselect * from Contacts where Contacts.ContactID = @ContactID ";
             SqlCommand command = new SqlCommand(query , connection);
             command.Parameters.AddWithValue("@Contact", ContactID); 
-
+            return isFound;
         }
         static void Main(string[] args)
         {
@@ -223,8 +223,8 @@ namespace ConsoleDataConnectionSql
           //  Console.WriteLine("Search for 'ne' ");
             //SearchForFirstTwoCharacter("J");
            // SearchForFirstTwoCharacter("ne");
-            Console.WriteLine(GetFirstName(1)); 
-            Console.WriteLine(GetFirstName(2));
+           /* Console.WriteLine(GetFirstName(1)); 
+            Console.WriteLine(GetFirstName(2));*/
 
            
             Console.ReadKey();
