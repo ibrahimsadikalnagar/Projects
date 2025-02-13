@@ -7,6 +7,7 @@ using System.Data.SqlClient;
 using System.Net.Http.Headers;
 using System.Net;
 using System.Security.Policy;
+using static ConsoleDataConnectionSql.Program;
 
 namespace ConsoleDataConnectionSql
 {
@@ -206,28 +207,123 @@ namespace ConsoleDataConnectionSql
         {
             bool isFound = false;
             SqlConnection connection = new SqlConnection(connectionString);
-            string query = "\r\nselect * from Contacts where Contacts.ContactID = @ContactID ";
+            string query = "select * from Contacts where Contacts.ContactID =@ContactID";
             SqlCommand command = new SqlCommand(query , connection);
-            command.Parameters.AddWithValue("@Contact", ContactID); 
+            command.Parameters.AddWithValue("@Contact", ContactID);
+            try
+            {
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.Read())
+                {
+                    isFound = true;
+                    contactInfo.ContactID = (int)reader["ContactID"];
+                    contactInfo.FirstName = (string)reader["FirstName"];
+                    contactInfo.LastName = (string)reader["LastName"];
+                    contactInfo.Email = (string)reader["Email"];
+                    contactInfo.Address = (string)reader["Address"];
+                    contactInfo.CountryID = (int)reader["CountryID"];
+
+
+                }
+                else
+                {
+                    isFound = false;
+                }
+                reader.Close();
+                connection.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error" + ex.ToString());
+            }
             return isFound;
         }
-        static void Main(string[] args)
+
+        static bool FindContactByID(int ContactID, ref SContact ContactInfo)
         {
-            SContact contact = new SContact();
+            bool isFound = false;
+
+            SqlConnection connection = new SqlConnection(connectionString);
+
+            string query = "SELECT * FROM Contacts WHERE ContactID = @ContactID";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("@ContactID", ContactID);
+
+            try
+            {
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.Read())
+                {
+
+                    // The record was found
+                    isFound = true;
+                    ContactInfo.ContactID = (int)reader["ContactID"];
+                    ContactInfo.FirstName = (string)reader["FirstName"];
+                    ContactInfo.LastName = (string)reader["LastName"];
+                    ContactInfo.Email = (string)reader["Email"];
+                    ContactInfo.Phone = (string)reader["Phone"];
+                    ContactInfo.Address = (string)reader["Address"];
+                    ContactInfo.CountryID = (int)reader["CountryID"];
+
+                }
+                else
+                {
+                    // The record was not found
+                    isFound = false;
+                }
+
+                reader.Close();
+                connection.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error: " + ex.Message);
+            }
 
 
-
-            //PrintAllContacts("Jane" , 1);
-            // PrintAllContacts("Jane"); 
-
-          //  Console.WriteLine("Search for 'ne' ");
-            //SearchForFirstTwoCharacter("J");
-           // SearchForFirstTwoCharacter("ne");
-           /* Console.WriteLine(GetFirstName(1)); 
-            Console.WriteLine(GetFirstName(2));*/
-
-           
-            Console.ReadKey();
+            return isFound;
         }
+
+            static void Main(string[] args)
+            {
+
+
+
+
+                //PrintAllContacts("Jane" , 1);
+                // PrintAllContacts("Jane"); 
+
+                //  Console.WriteLine("Search for 'ne' ");
+                //SearchForFirstTwoCharacter("J");
+                // SearchForFirstTwoCharacter("ne");
+                // Console.WriteLine(GetFirstName(1)); 
+
+                SContact sContact = new SContact();
+                if (FindFirstRecord(1, ref sContact))
+                {
+                    Console.WriteLine($"\nContanctID : {sContact.ContactID}");
+                    Console.WriteLine($"FirstName : {sContact.FirstName}");
+                    Console.WriteLine($"LastName : {sContact.LastName}");
+                    Console.WriteLine($"Email : {sContact.Email}");
+                    Console.WriteLine($"Phone : {sContact.Phone}");
+                    Console.WriteLine($"Address : {sContact.Address}");
+                    Console.WriteLine($"Country ID :{sContact.CountryID}");
+                }
+                else
+                {
+                    Console.WriteLine("Contact is not found");
+                }
+
+
+
+
+                Console.ReadKey();
+            }
+        
     }
 }
