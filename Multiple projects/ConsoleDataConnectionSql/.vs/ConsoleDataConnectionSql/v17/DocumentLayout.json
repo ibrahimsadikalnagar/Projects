@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\Repo\\Projects\\ConsoleDataConnectionSql\\",
+  "WorkspaceRootPath": "E:\\Repo\\Projects\\Multiple projects\\ConsoleDataConnectionSql\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{234C955C-1AC1-4A2C-8EF2-548FD8435D46}|ConsoleDataConnectionSql.csproj|e:\\repo\\projects\\consoledataconnectionsql\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{234C955C-1AC1-4A2C-8EF2-548FD8435D46}|ConsoleDataConnectionSql.csproj|e:\\repo\\projects\\multiple projects\\consoledataconnectionsql\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{234C955C-1AC1-4A2C-8EF2-548FD8435D46}|ConsoleDataConnectionSql.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -24,11 +24,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "E:\\Repo\\Projects\\ConsoleDataConnectionSql\\Program.cs",
+              "DocumentMoniker": "E:\\Repo\\Projects\\Multiple projects\\ConsoleDataConnectionSql\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "E:\\Repo\\Projects\\ConsoleDataConnectionSql\\Program.cs",
+              "ToolTip": "E:\\Repo\\Projects\\Multiple projects\\ConsoleDataConnectionSql\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAKUAAAAAAAAAAAA7wM8AAAAgAAAA",
+              "ViewState": "AQIAAFoAAAAAAAAAAAAYwM8AAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-13T12:51:20.711Z",
               "EditorCaption": ""
