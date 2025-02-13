@@ -205,11 +205,12 @@ namespace ConsoleDataConnectionSql
         }
         static bool FindFirstRecord(int ContactID, ref SContact contactInfo)
         {
-            bool isFound = false;
+           bool isFound = false;
+
             SqlConnection connection = new SqlConnection(connectionString);
-            string query = "select * from Contacts where Contacts.ContactID =@ContactID";
+            string query = "SELECT * FROM Contacts WHERE ContactID = @ContactID";
             SqlCommand command = new SqlCommand(query , connection);
-            command.Parameters.AddWithValue("@Contact", ContactID);
+            command.Parameters.AddWithValue("@ContactID", ContactID);
             try
             {
                 connection.Open();
