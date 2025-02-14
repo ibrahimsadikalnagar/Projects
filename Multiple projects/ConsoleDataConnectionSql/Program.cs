@@ -504,11 +504,38 @@ namespace ConsoleDataConnectionSql
 
         }
 
+        static void DeleteRowsFromTables(int ContactID)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = @"Delete from Contacts where ContactID = @ContactID ";
+                using (SqlCommand cmd = new SqlCommand(query, connection))
+                    
+                {
+                    cmd.Parameters.AddWithValue("@ContactID", ContactID);
+                    try
+                    {
+                        connection.Open();
+                        int rawEffected = cmd.ExecuteNonQuery();
+                        if (rawEffected > 0)
+                        {
+                            Console.WriteLine("Sucssessfullly Deleted");
+                        }
+
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("Error" + ex.Message);
+                    }
+                }
+            }
+        }
+
             static void Main(string[] args)
             {
             // To practice in update with sql table 
 
-            stContact sContact = new stContact()
+           /* stContact sContact = new stContact()
             {
                 FirstName = "ISA",
                 LastName = "2Pacc",
@@ -519,7 +546,9 @@ namespace ConsoleDataConnectionSql
                 CountryID = 1
             };
 
-            UpdateBYID(12, sContact);
+            UpdateBYID(12, sContact);*/
+
+            DeleteRowsFromTables(12);
 
 
 
