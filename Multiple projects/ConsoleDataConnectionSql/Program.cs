@@ -459,49 +459,121 @@ namespace ConsoleDataConnectionSql
 
             }
         }
-
-            static void Main(string[] args)
+        static void UpdateBYID(int ID , stContact Scontact)
+        {
+            string query = @"Update  Contacts  
+                            set FirstName = @FirstName, 
+                                LastName = @LastName, 
+                                Email = @Email, 
+                                Phone = @Phone, 
+                                Address = @Address, 
+                                CountryID = @CountryID
+                                where ContactID = @ContactID";
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
-            // create basic connection using ( using statment for automatic close the connection
-
-        /*//**   ReadCountriesData();
-            Console.WriteLine("Enter the number of the countries that you want to know");
-            
-            int CountryID = Convert.ToInt32(Console.ReadLine());*//*
-            
-            ReadCountriesData(CountryID);*/
-
-            string input = "exit";
-            while (true)
-            {
-              input =   Console.ReadLine(); 
-                if (input.ToLower() == "exit")
+                try
                 {
-                    Console.WriteLine("Data is exiting ");
-                    break;
+                    connection.Open();
+                    using (SqlCommand cmd = new SqlCommand(query, connection))
+                    {
+                        cmd.Parameters.AddWithValue(@"ContactID" , ID);
+                        cmd.Parameters.AddWithValue("@FirstName", Scontact.FirstName);
+                        cmd.Parameters.AddWithValue("@LastName", Scontact.LastName);
+                        cmd.Parameters.AddWithValue("@Email", Scontact.Email);
+                        cmd.Parameters.AddWithValue("@Phone", Scontact.Phone);
+                        cmd.Parameters.AddWithValue("@Address", Scontact.Address);
+
+                        cmd.Parameters.AddWithValue("@CountryID", Scontact.CountryID);
+
+                        int rawEffected = cmd.ExecuteNonQuery();
+                        if (rawEffected > 0)
+                        {
+                            Console.WriteLine("Update sucessfully");
+                        }
+                        else
+                        {
+                            Console.WriteLine("something wrong check with your data");
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Error" + ex.Message);
                 }
             }
 
-          
-           /* stContact contact = new stContact()
-            {
-                FirstName = "Ismail" , LastName = "Alangar" , Email = "Ismail@gmail.com" , 
-                Phone = "23232" , Address = "Hadda 3434" , CountryID = 3 
-            }; 
-            AddDataMetStruct(contact);*/
+        }
 
-
-           /* stContact contact1 = new stContact()
+            static void Main(string[] args)
             {
-               
-                FirstName = "Ibrahim",
-                LastName = "Alnagar",
-                Email = "Alnajjar@gmail.com",
-                Phone = "3434343",
-                Address = "ArnHel324",
+            // To practice in update with sql table 
+
+            stContact sContact = new stContact()
+            {
+                FirstName = "ISA",
+                LastName = "2Pacc",
+                Email = "PacEsms@gmail.com"
+                ,
+                Phone = "2525452",
+                Address = "Daa431",
                 CountryID = 1
             };
-            AddContact(contact1);*/
+
+            UpdateBYID(12, sContact);
+
+
+
+
+
+
+
+
+
+
+
+
+
+            // create basic connection using ( using statment for automatic close the connection
+
+            /*//**   ReadCountriesData();
+                Console.WriteLine("Enter the number of the countries that you want to know");
+
+                int CountryID = Convert.ToInt32(Console.ReadLine());*//*
+
+                ReadCountriesData(CountryID);*/
+
+
+            /* string input = "exit";
+             while (true)
+             {
+               input =   Console.ReadLine(); 
+                 if (input.ToLower() == "exit")
+                 {
+                     Console.WriteLine("Data is exiting ");
+                     break;
+                 }
+             }*/
+
+
+            /* stContact contact = new stContact()
+             {
+                 FirstName = "Ismail" , LastName = "Alangar" , Email = "Ismail@gmail.com" , 
+                 Phone = "23232" , Address = "Hadda 3434" , CountryID = 3 
+             }; 
+             AddDataMetStruct(contact);*/
+
+
+            /* stContact contact1 = new stContact()
+             {
+
+                 FirstName = "Ibrahim",
+                 LastName = "Alnagar",
+                 Email = "Alnajjar@gmail.com",
+                 Phone = "3434343",
+                 Address = "ArnHel324",
+                 CountryID = 1
+             };
+             AddContact(contact1);*/
 
             //PrintAllContacts("Jane" , 1);
             // PrintAllContacts("Jane"); 
