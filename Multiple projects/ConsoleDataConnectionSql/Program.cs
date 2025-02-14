@@ -193,16 +193,7 @@ namespace ConsoleDataConnectionSql
             return FirstName;
         
         }
-        public struct SContact
-        {
-            public int ContactID { get; set; }
-            public string FirstName { get; set; }
-            public string LastName { get; set; }
-            public string Email { get; set; }
-            public string Phone { get; set; }
-            public string Address { get; set; }
-            public int CountryID { get; set; }
-        }
+        
         static bool FindFirstRecord(int ContactID, ref SContact contactInfo)
         {
            bool isFound = false;
@@ -289,41 +280,259 @@ namespace ConsoleDataConnectionSql
 
             return isFound;
         }
+        public struct SContact
+        {
+            public int ContactID { get; set; }
+            public string FirstName { get; set; }
+            public string LastName { get; set; }
+            public string Email { get; set; }
+            public string Phone { get; set; }
+            public string Address { get; set; }
+            public int CountryID { get; set; }
+        }
+        public struct stContact
+        {
+      
+            public string FirstName { get; set; }
+            public string LastName { get; set; }
+            public string Email { get; set; }
+            public string Phone { get; set; }
+            public string Address { get; set; }
+            public int CountryID { get; set; }
+        }
+        static void AddContact(stContact newContact)
+        {
 
-            static void Main(string[] args)
+
+            SqlConnection connection = new SqlConnection(connectionString);
+
+            string query = @"INSERT INTO Contacts (FirstName, LastName, Email, Phone, Address, CountryID)
+                             VALUES (@FirstName, @LastName, @Email, @Phone, @Address, @CountryID)";
+
+            SqlCommand cmd = new SqlCommand(query, connection);
+
+            cmd.Parameters.AddWithValue("@FirstName", newContact.FirstName); 
+            cmd.Parameters.AddWithValue("@LastName" , newContact.LastName);
+            cmd.Parameters.AddWithValue("@Email" , newContact.Email);
+            cmd.Parameters.AddWithValue("@Phone" , newContact.Phone);
+            cmd.Parameters.AddWithValue("@Address", newContact.Address);
+            cmd.Parameters.AddWithValue("@CountryID ", newContact.CountryID);
+            try
             {
-
-
-
-
-                //PrintAllContacts("Jane" , 1);
-                // PrintAllContacts("Jane"); 
-
-                //  Console.WriteLine("Search for 'ne' ");
-                //SearchForFirstTwoCharacter("J");
-                // SearchForFirstTwoCharacter("ne");
-                // Console.WriteLine(GetFirstName(1)); 
-
-                SContact sContact = new SContact();
-                if (FindFirstRecord(1, ref sContact))
+                connection.Open();
+                int rowAffected = cmd.ExecuteNonQuery();
+                if (rowAffected > 0)
                 {
-                    Console.WriteLine($"\nContanctID : {sContact.ContactID}");
-                    Console.WriteLine($"FirstName : {sContact.FirstName}");
-                    Console.WriteLine($"LastName : {sContact.LastName}");
-                    Console.WriteLine($"Email : {sContact.Email}");
-                    Console.WriteLine($"Phone : {sContact.Phone}");
-                    Console.WriteLine($"Address : {sContact.Address}");
-                    Console.WriteLine($"Country ID :{sContact.CountryID}");
+                    Console.WriteLine("Data inserted sucssesfully ");
                 }
                 else
                 {
-                    Console.WriteLine("Contact is not found");
+                    Console.WriteLine("Record insertion failed");
                 }
 
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error" + ex.Message);
+            }
+        }
+
+
+        static void ReadData()
+        {
+            SqlConnection conn = new SqlConnection(connectionString);
+            string query = "select FirstName , LastName from Contacts";
+            SqlCommand command = new SqlCommand(query, conn);
+
+            try
+            {
+                conn.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    Console.WriteLine($"First Name {reader["FirstName"]} , Last Name {reader["LastName"]} \n ");
+
+                }
+                conn.Close();
+                reader.Close(); 
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error" + ex.Message);
+            }
+            
+        }
+
+        static void AddDataMetStruct(stContact newContact)
+        {
+            SqlConnection connection = new SqlConnection(connectionString);
+            string query = @"INSERT INTO Contacts (FirstName, LastName, Email, Phone, Address, CountryID)
+                             VALUES (@FirstName, @LastName, @Email, @Phone, @Address, @CountryID)";
+            try
+            {
+                connection.Open();
+                SqlCommand cmd = new SqlCommand(query, connection);
+
+                cmd.Parameters.AddWithValue("@FirstName", newContact.FirstName);
+                cmd.Parameters.AddWithValue("@LastName", newContact.LastName);
+                cmd.Parameters.AddWithValue("@Email", newContact.Email);
+                cmd.Parameters.AddWithValue("@Phone", newContact.Phone);
+                cmd.Parameters.AddWithValue("@Address", newContact.Address);
+                cmd.Parameters.AddWithValue("@CountryID ", newContact.CountryID);
+
+                int rowEffected = cmd.ExecuteNonQuery();
+                if (rowEffected > 0)
+                {
+                    Console.WriteLine("Data inserted sucessfully");
+                }
+                else
+                {
+                    Console.WriteLine(" Data not saved");
+                }
+                connection.Close();
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error" + ex.Message);
+            }
+        }
+        static void ReadCountriesData()
+        {
+            string query = "Select * from Countries";
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    conn.Open();
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                /* int CountryID = (int)reader["CountryID"];
+                                 string CountryName = (string)reader["CountryName"];*/
+                                //  Console.WriteLine($"CountryID: {CountryID} , CountryName : {CountryName}");
+                                Console.WriteLine($"ID :{reader[0]} , {reader["CountryName"]}");
+                            }
+                        }
+                    }
+
+
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Error" + ex.Message);
+                }
+               
+
+
+            }
+               
+        }
+        static void ReadCountriesData(int CountryID)
+        {
+            string query = "Select * from Countries where CountryID = @CountryID"; 
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    conn.Open();
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@CountryID", CountryID);
+                        using (SqlDataReader reader1 = cmd.ExecuteReader())
+                        {
+                            if (reader1.Read())
+                            {
+                                Console.WriteLine($"ID : {reader1[0]} , Country name :{reader1[1]}");
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Error" + ex.Message);
+                }
+
+            }
+        }
+
+            static void Main(string[] args)
+            {
+            // create basic connection using ( using statment for automatic close the connection
+
+        /*//**   ReadCountriesData();
+            Console.WriteLine("Enter the number of the countries that you want to know");
+            
+            int CountryID = Convert.ToInt32(Console.ReadLine());*//*
+            
+            ReadCountriesData(CountryID);*/
+
+            string input = "exit";
+            while (true)
+            {
+              input =   Console.ReadLine(); 
+                if (input.ToLower() == "exit")
+                {
+                    Console.WriteLine("Data is exiting ");
+                    break;
+                }
+            }
+
+          
+           /* stContact contact = new stContact()
+            {
+                FirstName = "Ismail" , LastName = "Alangar" , Email = "Ismail@gmail.com" , 
+                Phone = "23232" , Address = "Hadda 3434" , CountryID = 3 
+            }; 
+            AddDataMetStruct(contact);*/
+
+
+           /* stContact contact1 = new stContact()
+            {
+               
+                FirstName = "Ibrahim",
+                LastName = "Alnagar",
+                Email = "Alnajjar@gmail.com",
+                Phone = "3434343",
+                Address = "ArnHel324",
+                CountryID = 1
+            };
+            AddContact(contact1);*/
+
+            //PrintAllContacts("Jane" , 1);
+            // PrintAllContacts("Jane"); 
+
+            //  Console.WriteLine("Search for 'ne' ");
+            //SearchForFirstTwoCharacter("J");
+            // SearchForFirstTwoCharacter("ne");
+            // Console.WriteLine(GetFirstName(1)); 
+
+            // to find one record 
+            /* SContact sContact = new SContact();
+             if (FindFirstRecord(1, ref sContact))
+             {
+                 Console.WriteLine($"\nContanctID : {sContact.ContactID}");
+                 Console.WriteLine($"FirstName : {sContact.FirstName}");
+                 Console.WriteLine($"LastName : {sContact.LastName}");
+                 Console.WriteLine($"Email : {sContact.Email}");
+                 Console.WriteLine($"Phone : {sContact.Phone}");
+                 Console.WriteLine($"Address : {sContact.Address}");
+                 Console.WriteLine($"Country ID :{sContact.CountryID}");
+             }
+             else
+             {
+                 Console.WriteLine("Contact is not found");
+             }
+*/
 
 
 
-                Console.ReadKey();
+
+            Console.ReadKey();
             }
         
     }
