@@ -1,0 +1,13 @@
+E:\Repo\Projects\Multiple projects\WindowsFormsAppTry\bin\Debug\WindowsFormsAppTry.exe.config
+E:\Repo\Projects\Multiple projects\WindowsFormsAppTry\bin\Debug\WindowsFormsAppTry.exe
+E:\Repo\Projects\Multiple projects\WindowsFormsAppTry\bin\Debug\WindowsFormsAppTry.pdb
+E:\Repo\Projects\Multiple projects\WindowsFormsAppTry\bin\Debug\MyFirstClass.dll
+E:\Repo\Projects\Multiple projects\WindowsFormsAppTry\bin\Debug\MyFirstClass.pdb
+E:\Repo\Projects\Multiple projects\WindowsFormsAppTry\obj\Debug\WindowsFormsAppTry.csproj.AssemblyReference.cache
+E:\Repo\Projects\Multiple projects\WindowsFormsAppTry\obj\Debug\WindowsFormsAppTry.Form1.resources
+E:\Repo\Projects\Multiple projects\WindowsFormsAppTry\obj\Debug\WindowsFormsAppTry.Properties.Resources.resources
+E:\Repo\Projects\Multiple projects\WindowsFormsAppTry\obj\Debug\WindowsFormsAppTry.csproj.GenerateResource.cache
+E:\Repo\Projects\Multiple projects\WindowsFormsAppTry\obj\Debug\WindowsFormsAppTry.csproj.CoreCompileInputs.cache
+E:\Repo\Projects\Multiple projects\WindowsFormsAppTry\obj\Debug\WindowsF.0D6AB749.Up2Date
+E:\Repo\Projects\Multiple projects\WindowsFormsAppTry\obj\Debug\WindowsFormsAppTry.exe
+E:\Repo\Projects\Multiple projects\WindowsFormsAppTry\obj\Debug\WindowsFormsAppTry.pdb
