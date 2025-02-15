@@ -1,0 +1,6 @@
+E:\Repo\Projects\Multiple projects\MyFirstClass\bin\Debug\MyFirstClass.dll
+E:\Repo\Projects\Multiple projects\MyFirstClass\bin\Debug\MyFirstClass.pdb
+E:\Repo\Projects\Multiple projects\MyFirstClass\obj\Debug\MyFirstClass.csproj.AssemblyReference.cache
+E:\Repo\Projects\Multiple projects\MyFirstClass\obj\Debug\MyFirstClass.csproj.CoreCompileInputs.cache
+E:\Repo\Projects\Multiple projects\MyFirstClass\obj\Debug\MyFirstClass.dll
+E:\Repo\Projects\Multiple projects\MyFirstClass\obj\Debug\MyFirstClass.pdb

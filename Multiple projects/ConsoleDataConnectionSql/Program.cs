@@ -8,6 +8,7 @@ using System.Net.Http.Headers;
 using System.Net;
 using System.Security.Policy;
 using static ConsoleDataConnectionSql.Program;
+using MyFirstClass; 
 
 namespace ConsoleDataConnectionSql
 {
@@ -533,6 +534,10 @@ namespace ConsoleDataConnectionSql
 
             static void Main(string[] args)
             {
+
+            MyFirstMath myFirstMath = new MyFirstMath();
+
+            Console.WriteLine(myFirstMath.sum(2, 3, 5));
             // To practice in update with sql table 
 
            /* stContact sContact = new stContact()
@@ -549,6 +554,7 @@ namespace ConsoleDataConnectionSql
             UpdateBYID(12, sContact);*/
 
             DeleteRowsFromTables(12);
+
 
 
 

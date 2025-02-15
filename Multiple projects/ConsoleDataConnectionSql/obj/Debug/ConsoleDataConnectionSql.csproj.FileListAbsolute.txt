@@ -12,3 +12,6 @@ E:\Repo\Projects\Multiple projects\ConsoleDataConnectionSql\obj\Debug\ConsoleDat
 E:\Repo\Projects\Multiple projects\ConsoleDataConnectionSql\obj\Debug\ConsoleDataConnectionSql.csproj.CoreCompileInputs.cache
 E:\Repo\Projects\Multiple projects\ConsoleDataConnectionSql\obj\Debug\ConsoleDataConnectionSql.exe
 E:\Repo\Projects\Multiple projects\ConsoleDataConnectionSql\obj\Debug\ConsoleDataConnectionSql.pdb
+E:\Repo\Projects\Multiple projects\ConsoleDataConnectionSql\bin\Debug\MyFirstClass.dll
+E:\Repo\Projects\Multiple projects\ConsoleDataConnectionSql\bin\Debug\MyFirstClass.pdb
+E:\Repo\Projects\Multiple projects\ConsoleDataConnectionSql\obj\Debug\ConsoleD.322A7B86.Up2Date

@@ -5,6 +5,9 @@
     {
       "AbsoluteMoniker": "D:0:0:{234C955C-1AC1-4A2C-8EF2-548FD8435D46}|ConsoleDataConnectionSql.csproj|e:\\repo\\projects\\multiple projects\\consoledataconnectionsql\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{234C955C-1AC1-4A2C-8EF2-548FD8435D46}|ConsoleDataConnectionSql.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{797281A9-3729-4505-93FA-4518CC4E0EA5}|..\\MyFirstClass\\MyFirstClass.csproj|e:\\repo\\projects\\multiple projects\\myfirstclass\\myfirstmath.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,11 +17,28 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MyFirstMath.cs",
+              "DocumentMoniker": "E:\\Repo\\Projects\\Multiple projects\\MyFirstClass\\MyFirstMath.cs",
+              "RelativeDocumentMoniker": "..\\MyFirstClass\\MyFirstMath.cs",
+              "ToolTip": "E:\\Repo\\Projects\\Multiple projects\\MyFirstClass\\MyFirstMath.cs",
+              "RelativeToolTip": "..\\MyFirstClass\\MyFirstMath.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAgAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-15T12:43:52.678Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -28,7 +48,7 @@
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "E:\\Repo\\Projects\\Multiple projects\\ConsoleDataConnectionSql\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAABkCAAAAAAAAAAAmwCYCAAAjAAAA",
+              "ViewState": "AQIAAAoCAAAAAAAAAAAiwBQCAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-13T12:51:20.711Z",
               "EditorCaption": ""
