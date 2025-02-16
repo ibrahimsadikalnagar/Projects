@@ -3,17 +3,13 @@
   "WorkspaceRootPath": "E:\\Repo\\Projects\\Multiple projects\\ConsoleDataConnectionSql\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D5AA3B2E-3B3C-47F9-B969-D607265A2467}|..\\WindowsFormsAppTry\\WindowsFormsAppTry.csproj|e:\\repo\\projects\\multiple projects\\windowsformsapptry\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D85B112A-E09B-46D1-B1B9-D488DC87C278}|..\\DataAccessContactLayer\\DataAccessContactLayer.csproj|e:\\repo\\projects\\multiple projects\\dataaccesscontactlayer\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D5AA3B2E-3B3C-47F9-B969-D607265A2467}|..\\WindowsFormsAppTry\\WindowsFormsAppTry.csproj|e:\\repo\\projects\\multiple projects\\windowsformsapptry\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{218C460C-90B0-447B-8120-B0CE57AF8723}|..\\ContactBusinessLayer\\ContactBusinessLayer.csproj|e:\\repo\\projects\\multiple projects\\contactbusinesslayer\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{234C955C-1AC1-4A2C-8EF2-548FD8435D46}|ConsoleDataConnectionSql.csproj|e:\\repo\\projects\\multiple projects\\consoledataconnectionsql\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{234C955C-1AC1-4A2C-8EF2-548FD8435D46}|ConsoleDataConnectionSql.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{797281A9-3729-4505-93FA-4518CC4E0EA5}|..\\MyFirstClass\\MyFirstClass.csproj|e:\\repo\\projects\\multiple projects\\myfirstclass\\myfirstmath.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C2DFDB85-D679-4C32-AC70-E3D383ADDECF}|..\\ConsoleContactAppPersentation\\ConsoleContactAppPersentation.csproj|e:\\repo\\projects\\multiple projects\\consolecontactapppersentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -36,51 +32,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "E:\\Repo\\Projects\\Multiple projects\\WindowsFormsAppTry\\Form1.cs",
-              "RelativeDocumentMoniker": "..\\WindowsFormsAppTry\\Form1.cs",
-              "ToolTip": "E:\\Repo\\Projects\\Multiple projects\\WindowsFormsAppTry\\Form1.cs",
-              "RelativeToolTip": "..\\WindowsFormsAppTry\\Form1.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAQwBcAAABBAAAA",
+              "Title": "Class1.cs",
+              "DocumentMoniker": "E:\\Repo\\Projects\\Multiple projects\\DataAccessContactLayer\\Class1.cs",
+              "RelativeDocumentMoniker": "..\\DataAccessContactLayer\\Class1.cs",
+              "ToolTip": "E:\\Repo\\Projects\\Multiple projects\\DataAccessContactLayer\\Class1.cs",
+              "RelativeToolTip": "..\\DataAccessContactLayer\\Class1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-15T13:26:12.073Z",
+              "WhenOpened": "2025-02-16T19:33:18.806Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "E:\\Repo\\Projects\\Multiple projects\\WindowsFormsAppTry\\Form1.cs",
-              "RelativeDocumentMoniker": "..\\WindowsFormsAppTry\\Form1.cs",
-              "ToolTip": "E:\\Repo\\Projects\\Multiple projects\\WindowsFormsAppTry\\Form1.cs [Design]",
-              "RelativeToolTip": "..\\WindowsFormsAppTry\\Form1.cs [Design]",
+              "Title": "Class1.cs",
+              "DocumentMoniker": "E:\\Repo\\Projects\\Multiple projects\\ContactBusinessLayer\\Class1.cs",
+              "RelativeDocumentMoniker": "..\\ContactBusinessLayer\\Class1.cs",
+              "ToolTip": "E:\\Repo\\Projects\\Multiple projects\\ContactBusinessLayer\\Class1.cs",
+              "RelativeToolTip": "..\\ContactBusinessLayer\\Class1.cs",
+              "ViewState": "AQIAACcAAAAAAAAAAAAiwDoAAAAPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-15T13:20:11.342Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MyFirstMath.cs",
-              "DocumentMoniker": "E:\\Repo\\Projects\\Multiple projects\\MyFirstClass\\MyFirstMath.cs",
-              "RelativeDocumentMoniker": "..\\MyFirstClass\\MyFirstMath.cs",
-              "ToolTip": "E:\\Repo\\Projects\\Multiple projects\\MyFirstClass\\MyFirstMath.cs",
-              "RelativeToolTip": "..\\MyFirstClass\\MyFirstMath.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAgAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-15T12:43:52.678Z"
+              "WhenOpened": "2025-02-16T17:58:30.285Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Program.cs",
-              "DocumentMoniker": "E:\\Repo\\Projects\\Multiple projects\\ConsoleDataConnectionSql\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "E:\\Repo\\Projects\\Multiple projects\\ConsoleDataConnectionSql\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAALMBAAAAAAAAAAAIwBQCAAAJAAAA",
+              "DocumentMoniker": "E:\\Repo\\Projects\\Multiple projects\\ConsoleContactAppPersentation\\Program.cs",
+              "RelativeDocumentMoniker": "..\\ConsoleContactAppPersentation\\Program.cs",
+              "ToolTip": "E:\\Repo\\Projects\\Multiple projects\\ConsoleContactAppPersentation\\Program.cs",
+              "RelativeToolTip": "..\\ConsoleContactAppPersentation\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-13T12:51:20.711Z",
+              "WhenOpened": "2025-02-16T17:54:22.278Z",
               "EditorCaption": ""
             }
           ]
