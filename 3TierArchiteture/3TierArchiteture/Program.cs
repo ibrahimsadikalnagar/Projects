@@ -29,11 +29,19 @@ namespace _3TierArchiteture
             {
                 Console.WriteLine("Contact [" + ID + "] Not found!");
             }
+          
+
+        }
+        static void FindCountry(int ID)
+        {
+
 
         }
         static void Main(string[] args)
         {
             testFindContact(2); 
+            FindCountry(2);
+            
             Console.ReadKey();
         }
     }

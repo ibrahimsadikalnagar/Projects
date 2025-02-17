@@ -19,6 +19,8 @@ namespace ContactsBusinessLayers
         public DateTime DateOfBirth { get; set; }   
         public string ImagePath { get; set; }
        public int CountryID { get; set; }
+
+
         public clsContact(int iD, string firstName, string lastName, string email, string phone, string address, DateTime dateOfBirth, string imagePath, int countryID)
         {
             ID = iD;
@@ -50,6 +52,22 @@ namespace ContactsBusinessLayers
         }
 
     }
+
+    public class clsCountry
+    {
+        public int ID { get; set; }
+        public string CountryName { get; set; }
+
+        public clsCountry(int id, string countryName)
+        {
+            ID = id;
+            CountryName = countryName;
+        }
+
+        public static clsCountry Find(int ID) {
+            return clsCountry(ID ,ref CountryName);
+    }
+
 
    
 }
