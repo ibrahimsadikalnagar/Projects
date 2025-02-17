@@ -5,3 +5,8 @@ E:\Repo\Projects\3TierArchiteture\3TierArchiteture\obj\Debug\ContactsConsolePres
 E:\Repo\Projects\3TierArchiteture\3TierArchiteture\obj\Debug\ContactsConsolePresentation.csproj.CoreCompileInputs.cache
 E:\Repo\Projects\3TierArchiteture\3TierArchiteture\obj\Debug\3TierArchiteture.exe
 E:\Repo\Projects\3TierArchiteture\3TierArchiteture\obj\Debug\3TierArchiteture.pdb
+E:\Repo\Projects\3TierArchiteture\3TierArchiteture\bin\Debug\ContactsBusinessLayers.dll
+E:\Repo\Projects\3TierArchiteture\3TierArchiteture\bin\Debug\ContactsDataAccessLayer.dll
+E:\Repo\Projects\3TierArchiteture\3TierArchiteture\bin\Debug\ContactsBusinessLayers.pdb
+E:\Repo\Projects\3TierArchiteture\3TierArchiteture\bin\Debug\ContactsDataAccessLayer.pdb
+E:\Repo\Projects\3TierArchiteture\3TierArchiteture\obj\Debug\Contacts.1375B34D.Up2Date
