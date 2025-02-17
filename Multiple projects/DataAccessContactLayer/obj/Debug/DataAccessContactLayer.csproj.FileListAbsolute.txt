@@ -1,0 +1,2 @@
+E:\Repo\Projects\Multiple projects\DataAccessContactLayer\obj\Debug\DataAccessContactLayer.csproj.AssemblyReference.cache
+E:\Repo\Projects\Multiple projects\DataAccessContactLayer\obj\Debug\DataAccessContactLayer.csproj.CoreCompileInputs.cache

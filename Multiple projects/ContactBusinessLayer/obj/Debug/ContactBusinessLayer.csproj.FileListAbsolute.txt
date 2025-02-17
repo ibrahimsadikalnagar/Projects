@@ -1,0 +1,2 @@
+E:\Repo\Projects\Multiple projects\ContactBusinessLayer\obj\Debug\ContactBusinessLayer.csproj.AssemblyReference.cache
+E:\Repo\Projects\Multiple projects\ContactBusinessLayer\obj\Debug\ContactBusinessLayer.csproj.CoreCompileInputs.cache

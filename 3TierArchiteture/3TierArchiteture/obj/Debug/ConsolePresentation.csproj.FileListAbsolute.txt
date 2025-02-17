@@ -1,0 +1,7 @@
+E:\Repo\Projects\3TierArchiteture\3TierArchiteture\bin\Debug\3TierArchiteture.exe.config
+E:\Repo\Projects\3TierArchiteture\3TierArchiteture\bin\Debug\3TierArchiteture.exe
+E:\Repo\Projects\3TierArchiteture\3TierArchiteture\bin\Debug\3TierArchiteture.pdb
+E:\Repo\Projects\3TierArchiteture\3TierArchiteture\obj\Debug\ConsolePresentation.csproj.AssemblyReference.cache
+E:\Repo\Projects\3TierArchiteture\3TierArchiteture\obj\Debug\ConsolePresentation.csproj.CoreCompileInputs.cache
+E:\Repo\Projects\3TierArchiteture\3TierArchiteture\obj\Debug\3TierArchiteture.exe
+E:\Repo\Projects\3TierArchiteture\3TierArchiteture\obj\Debug\3TierArchiteture.pdb

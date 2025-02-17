@@ -1,0 +1,2 @@
+E:\Repo\Projects\Multiple projects\ConsoleContactAppPersentation\obj\Debug\ConsoleContactAppPersentation.csproj.AssemblyReference.cache
+E:\Repo\Projects\Multiple projects\ConsoleContactAppPersentation\obj\Debug\ConsoleContactAppPersentation.csproj.CoreCompileInputs.cache

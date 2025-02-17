@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataAccessContactLayer;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -54,11 +55,18 @@ namespace ContactBusinessLayer
             string FirstName = "", LastName = "", Email = "", Phone = "",
              Address = "", ImagePath = "";
             DateTime DateOfBirth = DateTime.Now;
-            int CountryID = -1; 
+            int CountryID = -1;
 
-            if()
+            if (clsContactDataAccess.GetContactInfoByID(ID, ref FirstName, ref LastName
+            , ref Address, ref Email, ref Phone,
+            ref ImagePath, ref DateOfBirth, ref CountryID))
+
+                return new clsContact(ID, FirstName, LastName,
+                          Email, Phone, Address, DateOfBirth, ImagePath, CountryID);
+            else
+                return null;
+
         }
-
 
 
 
