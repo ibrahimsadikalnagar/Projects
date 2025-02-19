@@ -9,37 +9,21 @@ namespace _3TierArchiteture
 {
     internal class Program
     {
-        static void testFindContact(int ID)
+
+        public static void Find(int CountrID)
         {
 
-            clsContact contact = clsContact.Find(ID);
-            if (contact != null)
-            {
+           clsCountry Country =  clsCountry.FindCountrybyID(CountrID);
 
-                Console.WriteLine(contact.FirstName + " " + contact.LastName);
-                Console.WriteLine(contact.Email);
-                Console.WriteLine(contact.Phone);
-                Console.WriteLine(contact.Address);
-                Console.WriteLine(contact.DateOfBirth);
-                Console.WriteLine(contact.CountryID);
-                Console.WriteLine(contact.ImagePath);
-                Console.WriteLine(contact.ID);
-            }
-            else
-            {
-                Console.WriteLine("Contact [" + ID + "] Not found!");
-            }
-          
-
+            Console.WriteLine("CountryID :" + Country.CountryID);
+            Console.WriteLine("CountryNaam : " + Country.CountryName);
         }
-      
-
+       
        
         static void Main(string[] args)
         {
-           testFindContact(2); 
-           
-            
+          
+            Find(1);
             Console.ReadKey();
         }
     }
