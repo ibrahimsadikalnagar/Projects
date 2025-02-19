@@ -64,8 +64,17 @@ namespace ContactsBusinessLayers
             CountryName = countryName;
         }
 
-        public static clsCountry Find(int ID) {
-            return clsCountry(ID ,ref CountryName);
+        public static clsCountry Find(int ID)
+        {
+            string CountryNaam = ""; 
+            if(clsContactDataAccess.GetCountryInfoByID(ID ,ref CountryNaam))
+                return new clsCountry(ID,CountryNaam); 
+            else
+                return null;
+
+
+            
+        }
     }
 
 

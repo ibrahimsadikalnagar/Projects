@@ -52,5 +52,44 @@ namespace ContactsDataAccessLayer
 
             return isFound;
         }
+        public static bool GetCountryInfoByID(int ID , ref string CtyName)
+        {
+            bool isFound = false;
+            SqlConnection conn = new SqlConnection(clsDataAccessSetting.ConnectionString);
+            string query = "Select * from Countries where CountryID = @CountryID"; 
+            SqlCommand command = new SqlCommand(query, conn);
+            command.Parameters.AddWithValue("@CountryID", ID);
+            try
+            {
+                conn.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.Read())
+                {
+                    isFound = true;
+                    CtyName = (string)reader["CountryName"];
+                }
+                else
+
+                {
+                    isFound = false;
+                }
+                reader.Close();
+
+
+            }
+            catch (Exception ex)
+            {
+                isFound = false;
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return isFound;
+
+
+
+        }
     }
+   
 }

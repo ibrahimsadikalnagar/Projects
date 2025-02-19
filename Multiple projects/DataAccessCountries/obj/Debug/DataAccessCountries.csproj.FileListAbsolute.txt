@@ -1,0 +1,6 @@
+E:\Repo\Projects\Multiple projects\DataAccessCountries\bin\Debug\DataAccessCountries.dll
+E:\Repo\Projects\Multiple projects\DataAccessCountries\bin\Debug\DataAccessCountries.pdb
+E:\Repo\Projects\Multiple projects\DataAccessCountries\obj\Debug\DataAccessCountries.csproj.AssemblyReference.cache
+E:\Repo\Projects\Multiple projects\DataAccessCountries\obj\Debug\DataAccessCountries.csproj.CoreCompileInputs.cache
+E:\Repo\Projects\Multiple projects\DataAccessCountries\obj\Debug\DataAccessCountries.dll
+E:\Repo\Projects\Multiple projects\DataAccessCountries\obj\Debug\DataAccessCountries.pdb

@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 
+
 namespace ConsoleContactAppPersentation
 {
     internal class Program
@@ -34,6 +35,7 @@ namespace ConsoleContactAppPersentation
         static void Main(string[] args)
         {
             testFindContact(1);
+           
         }
     }
 }

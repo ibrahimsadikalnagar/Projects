@@ -44,11 +44,5 @@
     <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\DataAccessContactLayer\DataAccessContactLayer.csproj">
-      <Project>{d85b112a-e09b-46d1-b1b9-d488dc87c278}</Project>
-      <Name>DataAccessContactLayer</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

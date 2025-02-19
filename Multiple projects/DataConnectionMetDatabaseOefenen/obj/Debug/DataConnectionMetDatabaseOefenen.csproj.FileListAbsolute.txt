@@ -1,0 +1,10 @@
+E:\Repo\Projects\Multiple projects\DataConnectionMetDatabaseOefenen\bin\Debug\DataConnectionMetDatabaseOefenen.exe.config
+E:\Repo\Projects\Multiple projects\DataConnectionMetDatabaseOefenen\bin\Debug\DataConnectionMetDatabaseOefenen.exe
+E:\Repo\Projects\Multiple projects\DataConnectionMetDatabaseOefenen\bin\Debug\DataConnectionMetDatabaseOefenen.pdb
+E:\Repo\Projects\Multiple projects\DataConnectionMetDatabaseOefenen\obj\Debug\DataConnectionMetDatabaseOefenen.csproj.AssemblyReference.cache
+E:\Repo\Projects\Multiple projects\DataConnectionMetDatabaseOefenen\obj\Debug\DataConnectionMetDatabaseOefenen.csproj.CoreCompileInputs.cache
+E:\Repo\Projects\Multiple projects\DataConnectionMetDatabaseOefenen\obj\Debug\DataConnectionMetDatabaseOefenen.exe
+E:\Repo\Projects\Multiple projects\DataConnectionMetDatabaseOefenen\obj\Debug\DataConnectionMetDatabaseOefenen.pdb
+E:\Repo\Projects\Multiple projects\DataConnectionMetDatabaseOefenen\bin\Debug\DataAccessCountries.dll
+E:\Repo\Projects\Multiple projects\DataConnectionMetDatabaseOefenen\bin\Debug\DataAccessCountries.pdb
+E:\Repo\Projects\Multiple projects\DataConnectionMetDatabaseOefenen\obj\Debug\DataConn.060866AB.Up2Date

@@ -54,6 +54,10 @@
       <Project>{218c460c-90b0-447b-8120-b0ce57af8723}</Project>
       <Name>ContactBusinessLayer</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DataConnectionMetDatabaseOefenen\DataConnectionMetDatabaseOefenen.csproj">
+      <Project>{e89cfb47-23b3-47fe-8d74-7f2be395d90b}</Project>
+      <Name>DataConnectionMetDatabaseOefenen</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
