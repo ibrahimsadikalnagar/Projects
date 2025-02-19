@@ -90,6 +90,20 @@ namespace ContactsDataAccessLayer
 
 
         }
+        public static void  PrintAllCountriesData(ref int ID , ref string CNaam)
+        {
+
+            ID = 0;
+            CNaam = " Jaman";
+        }
+    }
+
+    public class clsCountries
+    {
+        public int CountryId { get; set; }
+        public string CountryName { get; set; }
+       
+       
     }
    
 }

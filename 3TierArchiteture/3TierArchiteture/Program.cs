@@ -32,21 +32,13 @@ namespace _3TierArchiteture
           
 
         }
-        static void FindCountry(int ID)
-        {
+      
 
-            clsCountry country = clsCountry.Find(ID);
-            if (country != null)
-            {
-                Console.WriteLine(country.ID);
-                Console.WriteLine(country.CountryName);
-            }
-
-        }
+       
         static void Main(string[] args)
         {
-           //testFindContact(2); 
-            FindCountry(2);
+           testFindContact(2); 
+           
             
             Console.ReadKey();
         }

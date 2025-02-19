@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "E:\\Repo\\Projects\\Multiple projects\\ConsoleDataConnectionSql\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{218C460C-90B0-447B-8120-B0CE57AF8723}|..\\ContactBusinessLayer\\ContactBusinessLayer.csproj|e:\\repo\\projects\\multiple projects\\contactbusinesslayer\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Repo\\Projects\\Multiple projects\\ContactBusinessLayer\\Class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E89CFB47-23B3-47FE-8D74-7F2BE395D90B}|..\\DataConnectionMetDatabaseOefenen\\DataConnectionMetDatabaseOefenen.csproj|e:\\repo\\projects\\multiple projects\\dataconnectionmetdatabaseoefenen\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Repo\\Projects\\Multiple projects\\DataAccessCountries\\Class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F66F2C23-9ADF-43B0-9E2A-B1F4B0CFA30A}|..\\DataAccessCountries\\DataAccessCountries.csproj|e:\\repo\\projects\\multiple projects\\dataaccesscountries\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Repo\\Projects\\Multiple projects\\DataConnectionMetDatabaseOefenen\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{234C955C-1AC1-4A2C-8EF2-548FD8435D46}|ConsoleDataConnectionSql.csproj|e:\\repo\\projects\\multiple projects\\consoledataconnectionsql\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{234C955C-1AC1-4A2C-8EF2-548FD8435D46}|ConsoleDataConnectionSql.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Repo\\Projects\\Multiple projects\\ConsoleDataConnectionSql\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C2DFDB85-D679-4C32-AC70-E3D383ADDECF}|..\\ConsoleContactAppPersentation\\ConsoleContactAppPersentation.csproj|e:\\repo\\projects\\multiple projects\\consolecontactapppersentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Repo\\Projects\\Multiple projects\\ConsoleContactAppPersentation\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +38,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Class1.cs",
               "DocumentMoniker": "E:\\Repo\\Projects\\Multiple projects\\DataAccessCountries\\Class1.cs",
               "RelativeDocumentMoniker": "..\\DataAccessCountries\\Class1.cs",
@@ -46,12 +46,11 @@
               "RelativeToolTip": "..\\DataAccessCountries\\Class1.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-19T16:53:58.29Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-19T16:53:58.29Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "E:\\Repo\\Projects\\Multiple projects\\DataConnectionMetDatabaseOefenen\\Program.cs",
               "RelativeDocumentMoniker": "..\\DataConnectionMetDatabaseOefenen\\Program.cs",
@@ -59,8 +58,7 @@
               "RelativeToolTip": "..\\DataConnectionMetDatabaseOefenen\\Program.cs",
               "ViewState": "AQIAACIAAAAAAAAAAAAQwCwAAAA8AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-19T15:15:45.296Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-19T15:15:45.296Z"
             },
             {
               "$type": "Document",
@@ -72,8 +70,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AQIAABEAAAAAAAAAAAAAwBAAAABlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-19T15:14:09.941Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-19T15:14:09.941Z"
             },
             {
               "$type": "Document",
@@ -83,7 +80,7 @@
               "RelativeDocumentMoniker": "..\\ContactBusinessLayer\\Class1.cs",
               "ToolTip": "E:\\Repo\\Projects\\Multiple projects\\ContactBusinessLayer\\Class1.cs",
               "RelativeToolTip": "..\\ContactBusinessLayer\\Class1.cs",
-              "ViewState": "AQIAADAAAAAAAAAAAAAiwAkAAAAbAAAA",
+              "ViewState": "AQIAADkAAAAAAAAAAAAAAAkAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-16T17:58:30.285Z",
               "EditorCaption": ""
@@ -98,8 +95,7 @@
               "RelativeToolTip": "..\\ConsoleContactAppPersentation\\Program.cs",
               "ViewState": "AQIAABkAAAAAAAAAAAAQwCUAAAALAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T17:54:22.278Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T17:54:22.278Z"
             }
           ]
         }
