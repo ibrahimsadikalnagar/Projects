@@ -1,0 +1,7 @@
+E:\Repo\Projects\Multiple projects\OefenenAddCountry\bin\Debug\OefenenAddCountry.exe.config
+E:\Repo\Projects\Multiple projects\OefenenAddCountry\bin\Debug\OefenenAddCountry.exe
+E:\Repo\Projects\Multiple projects\OefenenAddCountry\bin\Debug\OefenenAddCountry.pdb
+E:\Repo\Projects\Multiple projects\OefenenAddCountry\obj\Debug\OefenenAddCountry.csproj.AssemblyReference.cache
+E:\Repo\Projects\Multiple projects\OefenenAddCountry\obj\Debug\OefenenAddCountry.csproj.CoreCompileInputs.cache
+E:\Repo\Projects\Multiple projects\OefenenAddCountry\obj\Debug\OefenenAddCountry.exe
+E:\Repo\Projects\Multiple projects\OefenenAddCountry\obj\Debug\OefenenAddCountry.pdb

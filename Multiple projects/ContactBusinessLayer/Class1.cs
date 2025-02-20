@@ -50,21 +50,10 @@ namespace ContactBusinessLayer
             Mode = enMode.AddNew;
 
         }
-        public static clsContact Find(int ID)
-        {
-            string FirstName = "", LastName = "", Email = "", Phone = "",
-             Address = "", ImagePath = "";
-            DateTime DateOfBirth = DateTime.Now;
-            int CountryID = -1;
+      
+           
 
-            if (clsContactDataAccess.GetContactInfoByID(ID, ref FirstName, ref LastName
-            , ref Address, ref Email, ref Phone,
-            ref ImagePath, ref DateOfBirth, ref CountryID))
-
-                return new clsContact(ID, FirstName, LastName,
-                          Email, Phone, Address, DateOfBirth, ImagePath, CountryID);
-            else
-                return null;
+              
 
         }
 

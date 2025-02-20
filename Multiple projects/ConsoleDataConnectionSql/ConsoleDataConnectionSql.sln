@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataConnectionMetDatabaseOe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessCountries", "..\DataAccessCountries\DataAccessCountries.csproj", "{F66F2C23-9ADF-43B0-9E2A-B1F4B0CFA30A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OefenenAddCountry", "..\OefenenAddCountry\OefenenAddCountry.csproj", "{7DFBBDAA-FE0A-40DF-B757-5243277263FC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{F66F2C23-9ADF-43B0-9E2A-B1F4B0CFA30A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F66F2C23-9ADF-43B0-9E2A-B1F4B0CFA30A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F66F2C23-9ADF-43B0-9E2A-B1F4B0CFA30A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DFBBDAA-FE0A-40DF-B757-5243277263FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DFBBDAA-FE0A-40DF-B757-5243277263FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DFBBDAA-FE0A-40DF-B757-5243277263FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DFBBDAA-FE0A-40DF-B757-5243277263FC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
