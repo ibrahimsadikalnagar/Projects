@@ -1,0 +1,10 @@
+E:\Repo\Projects\PracticeCRUD\PracticeCRUD\bin\Debug\PracticeCRUD.exe.config
+E:\Repo\Projects\PracticeCRUD\PracticeCRUD\bin\Debug\PracticeCRUD.exe
+E:\Repo\Projects\PracticeCRUD\PracticeCRUD\bin\Debug\PracticeCRUD.pdb
+E:\Repo\Projects\PracticeCRUD\PracticeCRUD\obj\Debug\PracticeCRUD.csproj.AssemblyReference.cache
+E:\Repo\Projects\PracticeCRUD\PracticeCRUD\obj\Debug\PracticeCRUD.csproj.CoreCompileInputs.cache
+E:\Repo\Projects\PracticeCRUD\PracticeCRUD\obj\Debug\PracticeCRUD.exe
+E:\Repo\Projects\PracticeCRUD\PracticeCRUD\obj\Debug\PracticeCRUD.pdb
+E:\Repo\Projects\PracticeCRUD\PracticeCRUD\bin\Debug\DataAccess.dll
+E:\Repo\Projects\PracticeCRUD\PracticeCRUD\bin\Debug\DataAccess.pdb
+E:\Repo\Projects\PracticeCRUD\PracticeCRUD\obj\Debug\Practice.50C9E196.Up2Date

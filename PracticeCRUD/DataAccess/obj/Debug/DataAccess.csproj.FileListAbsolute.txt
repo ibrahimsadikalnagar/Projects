@@ -1,0 +1,6 @@
+E:\Repo\Projects\PracticeCRUD\DataAccess\bin\Debug\DataAccess.dll
+E:\Repo\Projects\PracticeCRUD\DataAccess\bin\Debug\DataAccess.pdb
+E:\Repo\Projects\PracticeCRUD\DataAccess\obj\Debug\DataAccess.csproj.AssemblyReference.cache
+E:\Repo\Projects\PracticeCRUD\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
+E:\Repo\Projects\PracticeCRUD\DataAccess\obj\Debug\DataAccess.dll
+E:\Repo\Projects\PracticeCRUD\DataAccess\obj\Debug\DataAccess.pdb
