@@ -10,6 +10,24 @@ namespace _3TierArchiteture
     internal class Program
     {
 
+        public static void AddNew()
+        {
+            clsCountry Country1 = new clsCountry();
+            
+            Country1.CountryName = "Yemen"; 
+
+            if(Country1.Save())
+            {
+                Console.WriteLine("Country add successfully with Id = " + Country1.CountryID);
+            }
+
+        }
+
+
+
+
+
+
         public static void Find(int CountrID)
         {
 
@@ -20,10 +38,12 @@ namespace _3TierArchiteture
         }
        
        
+       
         static void Main(string[] args)
         {
           
-            Find(1);
+           // Find(1);
+           AddNew();
             Console.ReadKey();
         }
     }
