@@ -11,12 +11,13 @@ namespace PracticeCRUD
     internal class Program
     {
        
-
+        
         
 
         static void Main(string[] args)
         {
-            Console.WriteLine(  clsDataAccess.GetFirstCountryName(4));
+            /*Console.WriteLine(  clsDataAccess.GetFirstCountryName(4));*/
+            clsDataAccess.FindCountry(4);
             Console.ReadKey(); 
         }
     }
