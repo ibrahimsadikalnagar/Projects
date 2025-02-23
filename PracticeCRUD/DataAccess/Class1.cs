@@ -7,6 +7,14 @@ using System.Threading.Tasks;
 
 namespace DataAccess
 {
+    public class TryDataBase
+    {
+        public static void getData(ref int id ,ref string Name)
+        {
+            id = 0;
+            Name = "Ibrahim"; 
+        }
+    }
     public class sCountry 
     {
         public int Id { get; set; }
