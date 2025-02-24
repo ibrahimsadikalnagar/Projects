@@ -1,0 +1,6 @@
+E:\Repo\Projects\PracticeCRUD\DataConnections\bin\Debug\DataConnections.dll
+E:\Repo\Projects\PracticeCRUD\DataConnections\bin\Debug\DataConnections.pdb
+E:\Repo\Projects\PracticeCRUD\DataConnections\obj\Debug\DataConnections.csproj.AssemblyReference.cache
+E:\Repo\Projects\PracticeCRUD\DataConnections\obj\Debug\DataConnections.csproj.CoreCompileInputs.cache
+E:\Repo\Projects\PracticeCRUD\DataConnections\obj\Debug\DataConnections.dll
+E:\Repo\Projects\PracticeCRUD\DataConnections\obj\Debug\DataConnections.pdb

@@ -10,3 +10,5 @@ E:\Repo\Projects\PracticeCRUD\PracticeCRUD\bin\Debug\BusinessLayer.dll
 E:\Repo\Projects\PracticeCRUD\PracticeCRUD\bin\Debug\BusinessLayer.pdb
 E:\Repo\Projects\PracticeCRUD\PracticeCRUD\bin\Debug\DataAccess.dll
 E:\Repo\Projects\PracticeCRUD\PracticeCRUD\bin\Debug\DataAccess.pdb
+E:\Repo\Projects\PracticeCRUD\PracticeCRUD\bin\Debug\DataConnections.dll
+E:\Repo\Projects\PracticeCRUD\PracticeCRUD\bin\Debug\DataConnections.pdb

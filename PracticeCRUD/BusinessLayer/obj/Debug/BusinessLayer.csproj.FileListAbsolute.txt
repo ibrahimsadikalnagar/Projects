@@ -7,3 +7,5 @@ E:\Repo\Projects\PracticeCRUD\BusinessLayer\obj\Debug\BusinessLayer.csproj.CoreC
 E:\Repo\Projects\PracticeCRUD\BusinessLayer\obj\Debug\Business.EA331CBA.Up2Date
 E:\Repo\Projects\PracticeCRUD\BusinessLayer\obj\Debug\BusinessLayer.dll
 E:\Repo\Projects\PracticeCRUD\BusinessLayer\obj\Debug\BusinessLayer.pdb
+E:\Repo\Projects\PracticeCRUD\BusinessLayer\bin\Debug\DataConnections.dll
+E:\Repo\Projects\PracticeCRUD\BusinessLayer\bin\Debug\DataConnections.pdb

@@ -4,16 +4,21 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DataConnections; 
 
 namespace DataAccess
 {
+ 
+
     public class TryDataBase
     {
-        public static void getData(ref int id ,ref string Name)
+
+        public static void getData(out int id ,out string Name)
         {
             id = 0;
             Name = "Ibrahim"; 
         }
+       
     }
     public class sCountry 
     {
@@ -23,14 +28,12 @@ namespace DataAccess
     }
     public class clsDataAccess
     {
-        static string ConnectionString = "Server=.;Database=HR_Database;User Id=sa;Password=123456;";
-
-
-       public static string GetFirstCountryName(int CountryID)
+       
+        public static string GetFirstCountryName(int CountryID)
         {
             string CountryName = "";
 
-            SqlConnection connection = new SqlConnection(ConnectionString);
+            SqlConnection connection = new SqlConnection(clsDataConnections.ConnectionStringHR);
 
             string query = "select * from Countries ";
             SqlCommand command = new SqlCommand(query, connection);
@@ -61,7 +64,7 @@ namespace DataAccess
         {
             sCountry country = new sCountry();  
            
-            SqlConnection connection = new SqlConnection(ConnectionString);
+            SqlConnection connection = new SqlConnection(clsDataConnections.ConnectionStringHR);
             string query = "select * from Countries where ID =@CountryID"; 
             SqlCommand cmd = new SqlCommand(query, connection);
             cmd.Parameters.AddWithValue("@CountryID", CountryID);
@@ -89,6 +92,73 @@ namespace DataAccess
             
 
         }
+
+    }
+    public class clsDataCountry
+    {
+        public static void GetCoutryData(int CountryId , ref string CountryName , ref int CountryCode , ref string CountryInfo)
+        {
+            SqlConnection connection = new SqlConnection(clsDataConnections.ConnectionStringHR);
+
+            string query = "Select * from Countries where ID = @CountryId";
+
+            SqlCommand command = new SqlCommand(query, connection);
+            command.Parameters.AddWithValue("@CountryId" , CountryId);
+
+            try
+            {
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.Read())
+                {
+                    
+                    CountryName = (string)reader["Name"];
+                    CountryCode = (int)reader["CountryCode"];
+                    CountryInfo = (string)reader["CountryInfo"]; 
+
+                }
+
+            }
+            catch
+            {
+                Console.WriteLine("Error");
+            }
+            connection.Close() ;
+
+
+
+
+        }
+        public static int SaveCountryData(string CountryName , int CountryCode , string CountryInfo)
+
+        {
+            int CountryID = -1; 
+            SqlConnection conn = new SqlConnection(clsDataConnections.ConnectionStringHR);
+            string query = @"INSERT INTO Countries (Name, CountryCode, CountryInfo) 
+                 VALUES (@Name, @CountryCode, @CountryInfo); 
+                 SELECT SCOPE_IDENTITY();";
+
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("@Name" , CountryName);
+            cmd.Parameters.AddWithValue("@CountryCode" , CountryCode);
+            cmd.Parameters.AddWithValue("@CountryInfo", CountryInfo); 
+            try
+            {
+                conn.Open();
+                object result = cmd.ExecuteScalar();
+                if (result != null && int.TryParse(result.ToString(), out int insertedID))
+                {
+                    CountryID = insertedID;
+                }
+
+            }
+            catch(Exception ex) { Console.WriteLine("Error");
+                Console.WriteLine(ex.ToString()); }
+            conn.Close();
+            return CountryID;
+                
+        }
+
 
     }
 }
