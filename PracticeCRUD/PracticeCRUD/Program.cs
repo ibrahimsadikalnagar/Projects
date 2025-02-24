@@ -19,13 +19,25 @@ namespace PracticeCRUD
             TryBusniess data = TryBusniess.GetData1();
             Console.WriteLine($"ID : {data.Id} , Name: {data.Name}");
         }
+
+        public static void DabelNum(out int sum)
+        {
+            int gg = 10; 
+            sum = gg * 2; 
+        }
         
 
         static void Main(string[] args)
         {
             /*Console.WriteLine(  clsDataAccess.GetFirstCountryName(4));*/
-          print();
-            Console.ReadKey(); 
+        //  print();
+            
+
+            int sum ; 
+            DabelNum(out sum);
+            Console.WriteLine(sum);
+            Console.ReadKey();
+
         }
     }
 }
