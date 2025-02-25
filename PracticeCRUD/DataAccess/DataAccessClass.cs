@@ -10,154 +10,32 @@ namespace DataAccess
 {
  
 
-    public class TryDataBase
-    {
-
-        public static void getData(out int id ,out string Name)
-        {
-            id = 0;
-            Name = "Ibrahim"; 
-        }
-       
-    }
-    public class sCountry 
-    {
-        public int Id { get; set; }
-        public string CountryName { get; set; }
-        public int CountryCode { get; set; }
-    }
     public class clsDataAccess
     {
-       
-        public static string GetFirstCountryName(int CountryID)
+        public static  bool AddData(string Name , int CountryCode , string CountryInfo )
         {
-            string CountryName = "";
+          SqlConnection connection = new SqlConnection(clsDataConnections.ConnectionStringHR);
 
-            SqlConnection connection = new SqlConnection(clsDataConnections.ConnectionStringHR);
-
-            string query = "select * from Countries ";
-            SqlCommand command = new SqlCommand(query, connection);
-            //  command.Parameters.AddWithValue("@CountryID", CountryID);
+            string query = "Insert into Countries ( Name , CountryCode , CountryInfo) " +
+                "Values (@Name , @CountryCode , @CountryInfo)"; 
+            SqlCommand sqlCommand = new SqlCommand(query, connection);
+            sqlCommand.Parameters.AddWithValue("@Name", Name);
+            sqlCommand.Parameters.AddWithValue("@CountryCode", CountryCode); 
+            sqlCommand.Parameters.AddWithValue("@CountryInfo" , CountryInfo);
             try
             {
                 connection.Open();
-                object Result = command.ExecuteScalar();
-                if (Result != null)
-                {
-                    CountryName = Result.ToString();
-                }
-                else
-                {
-                    CountryName = "";
-                }
-                connection.Close();
+                int RowEffected = sqlCommand.ExecuteNonQuery();
+                return RowEffected > 0;
+            }
+            catch (Exception ex) {
+                Console.WriteLine(ex.Message);
+            }
+            return false;
 
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Error" + ex.Message);
-            }
-            return CountryName;
-            
-        }
-        public static sCountry FindCountry(int CountryID)
-        {
-            sCountry country = new sCountry();  
            
-            SqlConnection connection = new SqlConnection(clsDataConnections.ConnectionStringHR);
-            string query = "select * from Countries where ID =@CountryID"; 
-            SqlCommand cmd = new SqlCommand(query, connection);
-            cmd.Parameters.AddWithValue("@CountryID", CountryID);
-
-            try
-            {
-                connection.Open();
-                SqlDataReader reader = cmd.ExecuteReader();
-                if (reader.Read())
-                {
-                    country.Id = (int)reader["ID"];
-                    country.CountryName = (string)reader["Name"];
-                    country.CountryCode = (int)reader["CountryCode"];
-                }
-
-
-            }
-            catch
-            {
-            }
-            connection.Close() ;
-
-
-          return country;
-            
-
         }
 
-    }
-    public class clsDataCountry
-    {
-        public static void GetCoutryData(int CountryId , ref string CountryName , ref int CountryCode , ref string CountryInfo)
-        {
-            SqlConnection connection = new SqlConnection(clsDataConnections.ConnectionStringHR);
-
-            string query = "Select * from Countries where ID = @CountryId";
-
-            SqlCommand command = new SqlCommand(query, connection);
-            command.Parameters.AddWithValue("@CountryId" , CountryId);
-
-            try
-            {
-                connection.Open();
-                SqlDataReader reader = command.ExecuteReader();
-                if (reader.Read())
-                {
-                    
-                    CountryName = (string)reader["Name"];
-                    CountryCode = (int)reader["CountryCode"];
-                    CountryInfo = (string)reader["CountryInfo"]; 
-
-                }
-
-            }
-            catch
-            {
-                Console.WriteLine("Error");
-            }
-            connection.Close() ;
-
-
-
-
-        }
-        public static int SaveCountryData(string CountryName , int CountryCode , string CountryInfo)
-
-        {
-            int CountryID = -1; 
-            SqlConnection conn = new SqlConnection(clsDataConnections.ConnectionStringHR);
-            string query = @"INSERT INTO Countries (Name, CountryCode, CountryInfo) 
-                 VALUES (@Name, @CountryCode, @CountryInfo); 
-                 SELECT SCOPE_IDENTITY();";
-
-            SqlCommand cmd = new SqlCommand(query, conn);
-            cmd.Parameters.AddWithValue("@Name" , CountryName);
-            cmd.Parameters.AddWithValue("@CountryCode" , CountryCode);
-            cmd.Parameters.AddWithValue("@CountryInfo", CountryInfo); 
-            try
-            {
-                conn.Open();
-                object result = cmd.ExecuteScalar();
-                if (result != null && int.TryParse(result.ToString(), out int insertedID))
-                {
-                    CountryID = insertedID;
-                }
-
-            }
-            catch(Exception ex) { Console.WriteLine("Error");
-                Console.WriteLine(ex.ToString()); }
-            conn.Close();
-            return CountryID;
-                
-        }
 
 
     }

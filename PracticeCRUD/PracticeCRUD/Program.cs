@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Net;
 using System.Text;
@@ -12,40 +13,33 @@ namespace PracticeCRUD
     internal class Program
     {
 
-        static void print()
+        public static void AddDataToCountry()
         {
-            int  id;
-            string Name ; 
-            TryBusniess data = TryBusniess.GetData1();
-            Console.WriteLine($"ID : {data.Id} , Name: {data.Name}");
+            clsAddCountry Country = new clsAddCountry();
+
+            Country.CountryName = "UK";
+            Country.CountryCode = 0032;
+            Country.CountryInfo = "Niet meer Eroup union"; 
+
+            bool Sucess = clsAddCountry.AddCountry(Country);
+
+            if (Sucess)
+            {
+                Console.WriteLine("Success Saved ");
+            }
+            else
+            {
+                Console.WriteLine("Not saved");
+            }
         }
 
-        static void PrintCountry(int ID)
-        {
-            clsCountry country = clsCountry.GetAllDataCountry(ID);
-            Console.WriteLine($"ID: {country.CountryId} ," +
-                $" \n Country Name : {country.CountryName} ," +
-                $"\n Country Code : {country.CountryCode} ," +
-                $"\n Country Information {country.CountryInfo} ");
-                 
-        }
         
-        public static void  AddToCountry()
-        {
-            clsCountry Country = new clsCountry( "Egypt" , 0021 ,"i like paramits");
-           
-            Country.SaveCountryData();
-
-        }
 
         static void Main(string[] args)
         {
-            /*Console.WriteLine(  clsDataAccess.GetFirstCountryName(4));*/
-        //  print();
-         //   PrintCountry(1004);
-         AddToCountry();
+     
 
-          
+          AddDataToCountry();
             Console.ReadKey();
 
         }
