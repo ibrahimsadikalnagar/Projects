@@ -12,6 +12,7 @@ namespace DataAccess
 
     public class clsDataAccess
     {
+       
         public static  bool AddData(string Name , int CountryCode , string CountryInfo )
         {
           SqlConnection connection = new SqlConnection(clsDataConnections.ConnectionStringHR);
