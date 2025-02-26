@@ -33,13 +33,29 @@ namespace PracticeCRUD
             }
         }
 
-        
+        public static void AddCountry()
+        {
+           AddBusnissCountryLayer countryLayer = new AddBusnissCountryLayer();
+            countryLayer.Name = "Belgie";
+            countryLayer.CountryCode = 311;
+            countryLayer.CountryInfo = "Dicht bij Nederland";
+            if (countryLayer.save())
+            {
+                Console.WriteLine("The data saved" + countryLayer.ID);
+            }
+            else {
+                Console.WriteLine("The data is not saved");
+                    }
+
+
+        }
 
         static void Main(string[] args)
         {
      
 
-          AddDataToCountry();
+          //AddDataToCountry();
+          AddCountry();
             Console.ReadKey();
 
         }
