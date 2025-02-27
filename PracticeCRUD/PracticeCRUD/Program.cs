@@ -13,35 +13,15 @@ namespace PracticeCRUD
     internal class Program
     {
 
-        public static void AddDataToCountry()
-        {
-            clsAddCountry Country = new clsAddCountry();
-
-            Country.CountryName = "UK";
-            Country.CountryCode = 0032;
-            Country.CountryInfo = "Niet meer Eroup union"; 
-
-            bool Sucess = clsAddCountry.AddCountry(Country);
-
-            if (Sucess)
-            {
-                Console.WriteLine("Success Saved ");
-            }
-            else
-            {
-                Console.WriteLine("Not saved");
-            }
-        }
-
         public static void AddCountry()
         {
            AddBusnissCountryLayer countryLayer = new AddBusnissCountryLayer();
-            countryLayer.Name = "Belgie";
-            countryLayer.CountryCode = 311;
+            countryLayer.Name = "Frankrjk";
+            countryLayer.CountryCode = 313;
             countryLayer.CountryInfo = "Dicht bij Nederland";
             if (countryLayer.save())
             {
-                Console.WriteLine("The data saved" + countryLayer.ID);
+                Console.WriteLine("The data saved\nID : " + countryLayer.ID);
             }
             else {
                 Console.WriteLine("The data is not saved");
@@ -49,13 +29,40 @@ namespace PracticeCRUD
 
 
         }
+         static void FindData(int countryID)
+        {
+            AddBusnissCountryLayer countryfind = AddBusnissCountryLayer.FindData(countryID);
+            if (countryfind != null)
+            {
+                Console.WriteLine("\n" + countryfind.ID);
+                Console.WriteLine("\n" + countryfind.CountryInfo);
+                Console.WriteLine("\n" + countryfind.CountryCode);
+                Console.WriteLine("\n" + countryfind.Name);
+            }
 
+        }
+
+        static void UpdateD(int countryID)
+        {
+            AddBusnissCountryLayer countryUpdate = AddBusnissCountryLayer.FindData(countryID);
+            countryUpdate.Name = "USA";
+            countryUpdate.CountryCode = 0111;
+            countryUpdate.CountryInfo = "In moeste land met power";
+            if (countryUpdate.save())
+            {
+                Console.WriteLine("Saved succefully");
+            }
+            else
+            {
+                Console.WriteLine("Not Saved ");
+            }
+        }
         static void Main(string[] args)
         {
-     
-
-          //AddDataToCountry();
-          AddCountry();
+        //FindData(1008);
+       // AddCountry();
+       UpdateD(1);
+        
             Console.ReadKey();
 
         }

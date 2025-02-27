@@ -4,6 +4,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Net;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Security.Cryptography.X509Certificates;
 using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,30 +17,7 @@ namespace DataAccess
     public class clsDataAccess
     {
        
-        public static  bool AddData(string Name , int CountryCode , string CountryInfo )
-        {
-          SqlConnection connection = new SqlConnection(clsDataConnections.ConnectionStringHR);
-
-            string query = "Insert into Countries ( Name , CountryCode , CountryInfo) " +
-                "Values (@Name , @CountryCode , @CountryInfo)"; 
-            SqlCommand sqlCommand = new SqlCommand(query, connection);
-            sqlCommand.Parameters.AddWithValue("@Name", Name);
-            sqlCommand.Parameters.AddWithValue("@CountryCode", CountryCode); 
-            sqlCommand.Parameters.AddWithValue("@CountryInfo" , CountryInfo);
-            try
-            {
-                connection.Open();
-                int RowEffected = sqlCommand.ExecuteNonQuery();
-                return RowEffected > 0;
-            }
-            catch (Exception ex) {
-                Console.WriteLine(ex.Message);
-            }
-            return false;
-
-           
-        }
-
+        
         public static int AddNewData(string  Name , int CountryCode , string CountryInfo )
         {
            int  CountryID = -1; 
@@ -72,6 +50,63 @@ namespace DataAccess
 
 
             return CountryID;
+        }
+
+        public static bool FindDataByID(int ID , ref string Name , ref int CountryCode , ref string CountryInfo)
+        {
+            bool isFound = false;
+            SqlConnection connection = new SqlConnection(clsDataConnections.ConnectionStringHR);
+            string query = "Select * from Countries where ID = @ID "; 
+            SqlCommand cmd = new SqlCommand(query, connection);
+            cmd.Parameters.AddWithValue("@ID" , ID);
+            try
+            {
+                connection.Open();
+                SqlDataReader Reader = cmd.ExecuteReader();
+                if (Reader.Read())
+                {
+                    isFound = true;
+                    Name = (string)Reader["Name"];
+                    CountryCode = (int)Reader["CountryCode"];
+                    CountryInfo = (string)Reader["CountryInfo"];
+
+                }
+                else
+                {
+                    isFound = false;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error for inserting data" + ex.Message);
+            }
+            connection.Close();
+            
+            return isFound;
+
+        }
+
+        public static bool UpdateData(int ID, string Name, int CountryCode, string CountryInfo)
+        {
+            int rowEffected = 0;
+            SqlConnection conn = new SqlConnection(clsDataConnections.ConnectionStringHR);
+            string query = @"update Countries 
+                            set Name =@Name, CountryCode =@CountryCode , CountryInfo=@CountryInfo
+                                where ID =@ID";
+            SqlCommand Command = new SqlCommand(query, conn);
+            Command.Parameters.AddWithValue("@Name", Name);
+            Command.Parameters.AddWithValue("@CountryCode", CountryCode);
+            Command.Parameters.AddWithValue("@CountryInfo", CountryInfo);
+            Command.Parameters.AddWithValue("@ID", ID); 
+            try
+            {
+                conn.Open();
+                rowEffected = Command.ExecuteNonQuery();
+
+            }
+            catch (Exception ex) { Console.WriteLine(ex.Message); }
+            conn.Close();
+            return rowEffected > 0;
         }
 
 

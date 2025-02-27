@@ -8,25 +8,6 @@ using DataAccess;
 
 namespace BusinessLayer
 {
-  
-       public class clsAddCountry
-    {
-        public string  CountryName { get; set; }
-        public int CountryCode { get; set; }
-        public string CountryInfo { get; set; } 
-
-        
-
-        public clsAddCountry()
-        { 
-            
-        }
-        public static  bool AddCountry(clsAddCountry C)
-        {
-            return clsDataAccess.AddData(C.CountryName , C.CountryCode , C.CountryInfo);
-        }
-        
-    }
     public class AddBusnissCountryLayer
     {
         enum EMode { AddMode = 0, UpdateMode = 1 }
@@ -42,6 +23,7 @@ namespace BusinessLayer
             this.Name = "";
             this.CountryCode = 0;
             this.CountryInfo = "";
+            Mode = EMode.AddMode;
         }
 
         private AddBusnissCountryLayer(int iD, string name, int countryCode, string countryInfo)
@@ -50,11 +32,32 @@ namespace BusinessLayer
             Name = name;
             CountryCode = countryCode;
             CountryInfo = countryInfo;
+            Mode = EMode.UpdateMode;
         }
+
+        public static AddBusnissCountryLayer FindData(int ID)
+        {
+            string name1 = "", countryInfo1 ="";
+            int countryCode1 = 0;
+            if (clsDataAccess.FindDataByID(ID, ref name1, ref countryCode1, ref countryInfo1))
+            {
+                return new AddBusnissCountryLayer(ID, name1, countryCode1, countryInfo1);
+            }
+            else
+            {
+                return null;
+            }
+        }
+
         private bool _AddNewCountry()
         {
             this.ID = clsDataAccess.AddNewData(Name ,CountryCode, CountryInfo);
             return (this.ID != -1);
+        }
+
+        private bool _UpdateData()
+        {
+            return clsDataAccess.UpdateData(this.ID , this.Name , this.CountryCode , this.CountryInfo); 
         }
 
         public bool save()
@@ -73,7 +76,7 @@ namespace BusinessLayer
                     }
                 case EMode.UpdateMode:
 
-                    return _AddNewCountry();
+                    return _UpdateData();
             }
             return false;
 
