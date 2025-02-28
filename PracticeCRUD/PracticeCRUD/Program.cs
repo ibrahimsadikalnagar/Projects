@@ -57,11 +57,22 @@ namespace PracticeCRUD
                 Console.WriteLine("Not Saved ");
             }
         }
+        static void  DeleteDate(int countryID)
+        {
+            if (AddBusnissCountryLayer.DeleteDataCountry(countryID))
+            {
+                Console.WriteLine("Deleted successfully");
+            }
+            else {
+                Console.WriteLine("Not Deleted");
+                    }
+        }
         static void Main(string[] args)
         {
         //FindData(1008);
        // AddCountry();
-       UpdateD(1);
+     //  UpdateD(1);
+     DeleteDate(1017);
         
             Console.ReadKey();
 

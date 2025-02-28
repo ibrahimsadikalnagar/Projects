@@ -82,6 +82,12 @@ namespace BusinessLayer
 
         }
 
+        public static bool DeleteDataCountry(int ID)
+        {
+            return clsDataAccess.DeleteData(ID);
+        }
+
+
     }
     
     

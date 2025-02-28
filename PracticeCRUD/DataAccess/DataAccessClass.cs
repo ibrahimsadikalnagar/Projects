@@ -108,7 +108,26 @@ namespace DataAccess
             conn.Close();
             return rowEffected > 0;
         }
-
+        public static bool DeleteData(int ID)
+        {
+            int RowEffected = 0;
+            SqlConnection Connection = new SqlConnection(clsDataConnections.ConnectionStringHR);
+            string query = @"Delete Countries where ID =@ID";
+            SqlCommand Cmd = new SqlCommand(query, Connection);
+            Cmd.Parameters.AddWithValue("@ID", ID);
+            try
+            {
+                Connection.Open();
+                RowEffected = Cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error" + ex.Message);
+            }
+            Connection.Close();
+            return RowEffected > 0;
+        }
+        
 
     }
 }
