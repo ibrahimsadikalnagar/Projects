@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Net;
@@ -126,6 +127,32 @@ namespace DataAccess
             }
             Connection.Close();
             return RowEffected > 0;
+        }
+
+        public static DataTable GetAllData()
+        {
+            DataTable dt = new DataTable();
+            SqlConnection  conn = new SqlConnection(clsDataConnections.ConnectionStringHR);
+            string query = "Select * from Countries"; 
+            SqlCommand cmd = new SqlCommand(query, conn);
+            try
+            {
+                conn.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    dt.Load(reader);
+                }
+            }
+            catch (Exception ex) { Console.WriteLine("eRROR IN database" + ex.Message); }
+            finally
+            {
+
+                conn.Close();
+            }
+
+            return dt;
+
         }
         
 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Reflection.Emit;
 using System.Text;
@@ -86,6 +87,12 @@ namespace BusinessLayer
         {
             return clsDataAccess.DeleteData(ID);
         }
+
+        public static DataTable GetAllData()
+        {
+            return clsDataAccess.GetAllData();
+        }
+
 
 
     }

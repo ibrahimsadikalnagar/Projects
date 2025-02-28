@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
 using System.Data.SqlClient;
 using System.Diagnostics.Eventing.Reader;
 using System.Linq;
@@ -67,12 +69,23 @@ namespace PracticeCRUD
                 Console.WriteLine("Not Deleted");
                     }
         }
+        public static void ListCountries()
+        {
+            DataTable dataTable = AddBusnissCountryLayer.GetAllData();
+
+            Console.WriteLine("All Countries Data");
+            foreach (DataRow row in dataTable.Rows)
+            {
+                Console.WriteLine($"{row["ID"]} , {row["Name"]} , {row["CountryCode"]}");
+            }
+        }
         static void Main(string[] args)
         {
         //FindData(1008);
        // AddCountry();
      //  UpdateD(1);
-     DeleteDate(1017);
+    // DeleteDate(1017);
+    ListCountries();
         
             Console.ReadKey();
 
