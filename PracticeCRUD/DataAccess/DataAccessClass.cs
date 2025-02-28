@@ -154,7 +154,27 @@ namespace DataAccess
             return dt;
 
         }
-        
+
+        public static bool IfExitData(int id)
+        {
+            bool isFound = false;
+            SqlConnection conn = new SqlConnection(clsDataConnections.ConnectionStringHR);
+            string query = "select found = 1 from Countries";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            try
+            {
+                conn.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                isFound = reader.HasRows;
+            }
+            catch (Exception ex) { Console.WriteLine("Error in database layer" + ex.Message); }
+            finally
+
+            {
+                conn.Close();
+            }
+            return isFound;
+        }
 
     }
 }

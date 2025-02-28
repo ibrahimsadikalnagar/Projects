@@ -79,13 +79,25 @@ namespace PracticeCRUD
                 Console.WriteLine($"{row["ID"]} , {row["Name"]} , {row["CountryCode"]}");
             }
         }
+        public static void  ifDataExit(int countryID)
+        {
+            if (AddBusnissCountryLayer.CheckIfDataExit(countryID))
+            {
+                Console.WriteLine("Data exit");
+            }
+            else
+            {
+                Console.WriteLine("Data is not exit ");
+            }
+        }
         static void Main(string[] args)
         {
         //FindData(1008);
        // AddCountry();
      //  UpdateD(1);
     // DeleteDate(1017);
-    ListCountries();
+   // ListCountries();
+   ifDataExit(1007);
         
             Console.ReadKey();
 

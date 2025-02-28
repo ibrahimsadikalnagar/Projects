@@ -92,7 +92,10 @@ namespace BusinessLayer
         {
             return clsDataAccess.GetAllData();
         }
-
+        public static bool CheckIfDataExit(int ID)
+        {
+            return clsDataAccess.IfExitData(ID);
+        }
 
 
     }
