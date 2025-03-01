@@ -155,17 +155,18 @@ namespace DataAccess
 
         }
 
-        public static bool IfExitData(int id)
+        public static bool IfExitData(string Name)
         {
             bool isFound = false;
             SqlConnection conn = new SqlConnection(clsDataConnections.ConnectionStringHR);
-            string query = "select found = 1 from Countries";
+            string query = "select * from Countries where LOWER(Name) = LOWER(@Name)";
             SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("@Name" , Name);
             try
             {
                 conn.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
-                isFound = reader.HasRows;
+                isFound = reader.HasRows; 
             }
             catch (Exception ex) { Console.WriteLine("Error in database layer" + ex.Message); }
             finally
