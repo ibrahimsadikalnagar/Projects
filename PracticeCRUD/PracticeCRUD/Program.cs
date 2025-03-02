@@ -48,8 +48,8 @@ namespace PracticeCRUD
         {
             AddBusnissCountryLayer countryUpdate = AddBusnissCountryLayer.FindData(countryID);
             countryUpdate.Name = "USA";
-            countryUpdate.CountryCode = 0111;
-            countryUpdate.CountryInfo = "In moeste land met power";
+            countryUpdate.CountryCode = 11;
+            countryUpdate.CountryInfo = "Ik droom om te bezoek";
             if (countryUpdate.save())
             {
                 Console.WriteLine("Saved succefully");
@@ -94,9 +94,9 @@ namespace PracticeCRUD
         {
         //FindData(1008);
        // AddCountry();
-     //  UpdateD(1);
+       UpdateD(2);
     // DeleteDate(1017);
-    ListCountries();
+   // ListCountries();
   // ifDataExit("USA");
         
             Console.ReadKey();

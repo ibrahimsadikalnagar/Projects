@@ -1,0 +1,17 @@
+E:\Repo\Projects\PracticeCRUD\WindowsFormPersentationLayer\bin\Debug\WindowsFormPersentationLayer.exe.config
+E:\Repo\Projects\PracticeCRUD\WindowsFormPersentationLayer\bin\Debug\WindowsFormPersentationLayer.exe
+E:\Repo\Projects\PracticeCRUD\WindowsFormPersentationLayer\bin\Debug\WindowsFormPersentationLayer.pdb
+E:\Repo\Projects\PracticeCRUD\WindowsFormPersentationLayer\bin\Debug\BusinessLayer.dll
+E:\Repo\Projects\PracticeCRUD\WindowsFormPersentationLayer\bin\Debug\DataAccess.dll
+E:\Repo\Projects\PracticeCRUD\WindowsFormPersentationLayer\bin\Debug\DataConnections.dll
+E:\Repo\Projects\PracticeCRUD\WindowsFormPersentationLayer\bin\Debug\BusinessLayer.pdb
+E:\Repo\Projects\PracticeCRUD\WindowsFormPersentationLayer\bin\Debug\DataAccess.pdb
+E:\Repo\Projects\PracticeCRUD\WindowsFormPersentationLayer\bin\Debug\DataConnections.pdb
+E:\Repo\Projects\PracticeCRUD\WindowsFormPersentationLayer\obj\Debug\WindowsFormPersentationLayer.csproj.AssemblyReference.cache
+E:\Repo\Projects\PracticeCRUD\WindowsFormPersentationLayer\obj\Debug\WindowsFormPersentationLayer.MainForm.resources
+E:\Repo\Projects\PracticeCRUD\WindowsFormPersentationLayer\obj\Debug\WindowsFormPersentationLayer.Properties.Resources.resources
+E:\Repo\Projects\PracticeCRUD\WindowsFormPersentationLayer\obj\Debug\WindowsFormPersentationLayer.csproj.GenerateResource.cache
+E:\Repo\Projects\PracticeCRUD\WindowsFormPersentationLayer\obj\Debug\WindowsFormPersentationLayer.csproj.CoreCompileInputs.cache
+E:\Repo\Projects\PracticeCRUD\WindowsFormPersentationLayer\obj\Debug\WindowsF.5C8B3147.Up2Date
+E:\Repo\Projects\PracticeCRUD\WindowsFormPersentationLayer\obj\Debug\WindowsFormPersentationLayer.exe
+E:\Repo\Projects\PracticeCRUD\WindowsFormPersentationLayer\obj\Debug\WindowsFormPersentationLayer.pdb
