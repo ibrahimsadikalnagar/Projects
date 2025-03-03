@@ -29,23 +29,26 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonAddCountry = new System.Windows.Forms.Button();
             this.dataGridViewCountry = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip3 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.edltToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCountry)).BeginInit();
             this.contextMenuStrip3.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button1
+            // buttonAddCountry
             // 
-            this.button1.Location = new System.Drawing.Point(1049, 27);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(133, 58);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Add New Contact";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonAddCountry.Location = new System.Drawing.Point(1049, 27);
+            this.buttonAddCountry.Name = "buttonAddCountry";
+            this.buttonAddCountry.Size = new System.Drawing.Size(133, 58);
+            this.buttonAddCountry.TabIndex = 0;
+            this.buttonAddCountry.Text = "Add New Contact";
+            this.buttonAddCountry.UseVisualStyleBackColor = true;
+            this.buttonAddCountry.Click += new System.EventHandler(this.button1_Click);
             // 
             // dataGridViewCountry
             // 
@@ -64,20 +67,34 @@
             this.contextMenuStrip3.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripSeparator1,
-            this.edltToolStripMenuItem});
+            this.edltToolStripMenuItem,
+            this.toolStripSeparator2,
+            this.deleteToolStripMenuItem});
             this.contextMenuStrip3.Name = "contextMenuStrip3";
-            this.contextMenuStrip3.Size = new System.Drawing.Size(211, 62);
+            this.contextMenuStrip3.Size = new System.Drawing.Size(123, 64);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(207, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(119, 6);
             // 
             // edltToolStripMenuItem
             // 
             this.edltToolStripMenuItem.Name = "edltToolStripMenuItem";
-            this.edltToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.edltToolStripMenuItem.Size = new System.Drawing.Size(122, 24);
             this.edltToolStripMenuItem.Text = "Edlt";
+            this.edltToolStripMenuItem.Click += new System.EventHandler(this.edltToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(119, 6);
+            // 
+            // deleteToolStripMenuItem
+            // 
+            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(122, 24);
+            this.deleteToolStripMenuItem.Text = "Delete";
             // 
             // MainForm
             // 
@@ -85,7 +102,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1194, 450);
             this.Controls.Add(this.dataGridViewCountry);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonAddCountry);
             this.Name = "MainForm";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.MainForm_Load);
@@ -97,11 +114,13 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonAddCountry;
         private System.Windows.Forms.DataGridView dataGridViewCountry;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip3;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem edltToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
     }
 }
 

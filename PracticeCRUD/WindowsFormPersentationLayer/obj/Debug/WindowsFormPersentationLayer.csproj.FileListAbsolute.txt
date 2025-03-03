@@ -15,3 +15,4 @@ E:\Repo\Projects\PracticeCRUD\WindowsFormPersentationLayer\obj\Debug\WindowsForm
 E:\Repo\Projects\PracticeCRUD\WindowsFormPersentationLayer\obj\Debug\WindowsF.5C8B3147.Up2Date
 E:\Repo\Projects\PracticeCRUD\WindowsFormPersentationLayer\obj\Debug\WindowsFormPersentationLayer.exe
 E:\Repo\Projects\PracticeCRUD\WindowsFormPersentationLayer\obj\Debug\WindowsFormPersentationLayer.pdb
+E:\Repo\Projects\PracticeCRUD\WindowsFormPersentationLayer\obj\Debug\WindowsFormPersentationLayer.FrmAddEdit.resources

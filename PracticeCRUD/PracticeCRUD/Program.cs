@@ -93,7 +93,7 @@ namespace PracticeCRUD
         static void Main(string[] args)
         {
         //FindData(1008);
-       // AddCountry();
+       //AddCountry();
        UpdateD(2);
     // DeleteDate(1017);
    // ListCountries();

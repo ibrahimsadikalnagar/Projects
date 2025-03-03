@@ -61,5 +61,20 @@ namespace WindowsFormPersentationLayer
             //  MainForm frm = new MainForm((int)dataGridViewCountry.CurrentRow.Cells[0].Value);
             MessageBox.Show("hello"); 
         }
+
+        private void edltToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           FrmAddEdit frm2 = new FrmAddEdit((int) dataGridViewCountry.CurrentRow.Cells[0].Value); 
+            frm2.ShowDialog();
+            _RefreshCountryList(); 
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FrmAddEdit frm2 = new FrmAddEdit(-1);
+            frm2.ShowDialog();
+            _RefreshCountryList(); 
+        }
     }
 }
