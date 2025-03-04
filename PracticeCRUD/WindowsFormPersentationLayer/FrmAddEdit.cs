@@ -53,6 +53,12 @@ namespace WindowsFormPersentationLayer
         }
         private void _load()
         {
+            if (_Mode == enMode.AddMode)
+            {
+                lblMode.Text = "Add new country";
+                _Country = new AddBusnissCountryLayer();
+                return;
+            }
             _Country = AddBusnissCountryLayer.FindData(_CountryID);
             if (_Country == null)
             {
