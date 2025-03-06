@@ -176,6 +176,38 @@ namespace DataAccess
             }
             return isFound;
         }
+        public static bool GetCountryByName(string CountryName, ref int CountryID
+            , ref int CountryCode, ref string CountryInfo)
+        {
+            bool isFound = false;
+            SqlConnection conn = new SqlConnection(clsDataConnections.ConnectionStringHR);
+            string query = "Select * from Countries where Name = @CountryName";
+            SqlCommand command = new SqlCommand(query, conn);
+            command.Parameters.AddWithValue("@CountryName", CountryName);
+            try
+            {
+                conn.Open();
+                SqlDataReader Reader = command.ExecuteReader();
+                if (Reader.Read())
+                {
+                    isFound = true;
+                    CountryID = (int)Reader["ID"];
+                    CountryCode = (int)Reader["CountryCode"];
+                    CountryInfo = (string)Reader["CountryInfo"];
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                isFound = false;
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return isFound;
+        }
+
 
     }
 }

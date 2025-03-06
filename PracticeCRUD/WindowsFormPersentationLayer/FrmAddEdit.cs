@@ -33,7 +33,8 @@ namespace WindowsFormPersentationLayer
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
-            _Country = new AddBusnissCountryLayer();
+            int CountryID = AddBusnissCountryLayer.Find(textBoxCountryName.Text).ID;
+           
             _Country.Name = textBoxCountryName.Text;
             _Country.CountryCode=int.Parse( textBoxCountryCode.Text);  
             _Country.CountryInfo=textBoxCountryInfo.Text;
@@ -59,12 +60,14 @@ namespace WindowsFormPersentationLayer
                 _Country = new AddBusnissCountryLayer();
                 return;
             }
-            _Country = AddBusnissCountryLayer.FindData(_CountryID);
+            _Country = AddBusnissCountryLayer.Find(_CountryID);
             if (_Country == null)
             {
                 MessageBox.Show("The ID that you entered is not valid");
+                this.Close();
                 return;
             }
+            lblMode .Text = "Edit Country ID " + _Country.ID;
             textBoxCountryID.Text = _Country.ID.ToString();
             textBoxCountryName.Text = _Country.Name;    
             textBoxCountryCode.Text = _Country.CountryCode.ToString();

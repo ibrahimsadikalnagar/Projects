@@ -9,7 +9,8 @@ namespace DataConnections
     public class clsDataConnections
     {
        public static  string ConnectionStringContacts = "Server=.;Database=ContactsDB;User Id=sa;Password=123456;";
-     public    static string ConnectionStringHR = "Server=.;Database=HR_Database;User Id=sa;Password=123456;";
+     public static string ConnectionStringHR = "Server=.;Database=HR_Database;User Id=sa;Password=123456;";
+        public static string ConnectionStringWords = "Server=.;Database=DutchDictionary;User Id=sa;Password=123456;";
 
     }
 }

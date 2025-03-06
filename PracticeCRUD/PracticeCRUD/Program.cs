@@ -8,6 +8,7 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using BusinessLayer;
 
 namespace PracticeCRUD
@@ -33,7 +34,7 @@ namespace PracticeCRUD
         }
          static void FindData(int countryID)
         {
-            AddBusnissCountryLayer countryfind = AddBusnissCountryLayer.FindData(countryID);
+            AddBusnissCountryLayer countryfind = AddBusnissCountryLayer.Find(countryID);
             if (countryfind != null)
             {
                 Console.WriteLine("\n" + countryfind.ID);
@@ -46,7 +47,7 @@ namespace PracticeCRUD
 
         static void UpdateD(int countryID)
         {
-            AddBusnissCountryLayer countryUpdate = AddBusnissCountryLayer.FindData(countryID);
+            AddBusnissCountryLayer countryUpdate = AddBusnissCountryLayer.Find(countryID);
             countryUpdate.Name = "USA";
             countryUpdate.CountryCode = 11;
             countryUpdate.CountryInfo = "Ik droom om te bezoek";
@@ -90,15 +91,39 @@ namespace PracticeCRUD
                 Console.WriteLine("Data is not exit ");
             }
         }
+        public static void FindByName(string name)
+        {
+            AddBusnissCountryLayer Country =  AddBusnissCountryLayer.Find(name);
+            if (Country != null)
+            {
+                Console.WriteLine(Country.Name);
+                Console.WriteLine(Country.ID);
+                Console.WriteLine(Country.CountryCode);
+                Console.WriteLine(Country.CountryInfo);
+            }
+            else
+            {
+                Console.WriteLine("Country not found"); 
+            }
+            
+        }
+        public static int  GetIDbyName(string name)
+        {
+            int ID = AddBusnissCountryLayer.Find(name).CountryCode;
+            return ID;
+        }
+
         static void Main(string[] args)
         {
-        //FindData(1008);
-       //AddCountry();
-       UpdateD(2);
-    // DeleteDate(1017);
-   // ListCountries();
-  // ifDataExit("USA");
-        
+            // FindByName("USA");
+            // Console.WriteLine(GetIDbyName("USA")); 
+            //FindData(1008);
+            //AddCountry();
+            //UpdateD(2);
+            // DeleteDate(1017);
+            // ListCountries();
+            // ifDataExit("USA");
+            Application.Run(new FrmMainWords());  
             Console.ReadKey();
 
         }

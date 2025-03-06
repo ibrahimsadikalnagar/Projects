@@ -12,3 +12,6 @@ E:\Repo\Projects\PracticeCRUD\PracticeCRUD\bin\Debug\DataAccess.dll
 E:\Repo\Projects\PracticeCRUD\PracticeCRUD\bin\Debug\DataAccess.pdb
 E:\Repo\Projects\PracticeCRUD\PracticeCRUD\bin\Debug\DataConnections.dll
 E:\Repo\Projects\PracticeCRUD\PracticeCRUD\bin\Debug\DataConnections.pdb
+E:\Repo\Projects\PracticeCRUD\PracticeCRUD\obj\Debug\PracticeCRUD.FrmMainWords.resources
+E:\Repo\Projects\PracticeCRUD\PracticeCRUD\obj\Debug\PracticeCRUD.csproj.GenerateResource.cache
+E:\Repo\Projects\PracticeCRUD\PracticeCRUD\obj\Debug\PracticeCRUD.FrmAddEditWords.resources

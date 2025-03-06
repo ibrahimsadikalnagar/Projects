@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Reflection.Emit;
 using System.Text;
@@ -20,7 +21,7 @@ namespace BusinessLayer
 
         public AddBusnissCountryLayer()
         {
-            this.ID = 0;
+            this.ID = -1;
             this.Name = "";
             this.CountryCode = 0;
             this.CountryInfo = "";
@@ -36,7 +37,7 @@ namespace BusinessLayer
             Mode = EMode.UpdateMode;
         }
 
-        public static AddBusnissCountryLayer FindData(int ID)
+        public static AddBusnissCountryLayer Find(int ID)
         {
             string name1 = "", countryInfo1 ="";
             int countryCode1 = 0;
@@ -48,6 +49,17 @@ namespace BusinessLayer
             {
                 return null;
             }
+        }
+        public static AddBusnissCountryLayer Find(string CountryName)
+        {
+            int ID = -1;
+            int CountryCode = 0;
+            string CountryInfo = "";
+            if (clsDataAccess.GetCountryByName(CountryName, ref ID, ref CountryCode, ref CountryInfo))
+
+                return new AddBusnissCountryLayer(ID, CountryName, CountryCode, CountryInfo);
+            else
+                return null;
         }
 
         private bool _AddNewCountry()
@@ -96,6 +108,7 @@ namespace BusinessLayer
         {
             return clsDataAccess.IfExitData(CountryName);
         }
+        
 
 
     }

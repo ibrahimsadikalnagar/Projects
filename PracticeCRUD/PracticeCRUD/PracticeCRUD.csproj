@@ -35,6 +35,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -43,6 +45,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmAddEditWords.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddEditWords.Designer.cs">
+      <DependentUpon>FrmAddEditWords.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMainWords.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMainWords.Designer.cs">
+      <DependentUpon>FrmMainWords.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -54,6 +68,14 @@
       <Project>{9f59fcfa-7498-4834-babb-f66acd47d783}</Project>
       <Name>BusinessLayer</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FrmAddEditWords.resx">
+      <DependentUpon>FrmAddEditWords.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMainWords.resx">
+      <DependentUpon>FrmMainWords.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
