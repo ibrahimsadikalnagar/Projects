@@ -34,6 +34,7 @@ namespace PracticeCRUD
                 lblWordID.Text = clsWords.WordID.ToString();
                 lblTitle.Text = "Edit Word"; 
             }
+            
 
         }
 

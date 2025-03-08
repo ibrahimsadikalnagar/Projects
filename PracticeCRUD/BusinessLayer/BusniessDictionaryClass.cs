@@ -16,6 +16,15 @@ namespace BusinessLayer
         public string Translate { get; set; }
         public int WordTypeID { get; set; } 
 
+        public clsBusniessWords() 
+        { 
+            this.WordID = -1;
+            this.Word = "";
+            this.Translate = ""; 
+            this.WordTypeID = 1;    
+        }
+       
+
         //To Get all the data
         public static DataTable GetAllData()
         {
@@ -24,7 +33,12 @@ namespace BusinessLayer
         public bool _AddWords()
         {
             this.WordID = clsDataAccessWords.AddNewWord(this.Word , this.Translate , this.WordTypeID);
-            return (this.WordID != -1);
+            if (this.WordID != -1)
+            
+                return true;
+            
+            else
+            return false;
         }
 
     }

@@ -123,9 +123,51 @@ namespace PracticeCRUD
             // DeleteDate(1017);
             // ListCountries();
             // ifDataExit("USA");
-            Application.Run(new FrmMainWords());  
-            Console.ReadKey();
+            DataTable ContactTable = new DataTable();
+            ContactTable.Columns.Add("ID", typeof(int));
+            ContactTable.Columns.Add("Name", typeof(string));
+            ContactTable.Columns.Add("Salaris", typeof(double));
+        
 
+            //Add rows 
+            ContactTable.Rows.Add(1, "Ibrahim Alnagar" ,4300);
+            ContactTable.Rows.Add(2, "Tim Elbeed",3500);
+            ContactTable.Rows.Add(3, "Yossif Ibra", 3399);
+            ContactTable.Rows.Add(4, "Ward Algeer", 4200);
+            ContactTable.Rows.Add(5, "Bavik Roty", 5600);
+
+            int EmployeeCount = 0;
+            Double TotalSalaris = 0;   
+            Double AverageSalaris = 0;
+            Double MaxSalaries = 0;
+            Double MinSalaries = 0;
+
+            EmployeeCount = ContactTable.Rows.Count;    
+            TotalSalaris = Convert.ToDouble(ContactTable.Compute("Sum(Salaris)" , string.Empty));
+            AverageSalaris = Convert.ToDouble(ContactTable.Compute("Avg(Salaris)" , string.Empty ));
+            MaxSalaries = Convert.ToDouble(ContactTable.Compute("Max(Salaris)" , string.Empty ));
+            MinSalaries = Convert.ToDouble(ContactTable.Compute("Min(Salaris)" , string.Empty )) ;   
+
+
+
+
+            Console.WriteLine("\nList of the Contact Discription is ");
+            foreach (DataRow row in ContactTable.Rows)
+            {
+                Console.WriteLine("ID : {0} \t Name : {1} \t Salaris : {2}", row[0] , row[1] , row[2]);
+
+                //  Application.Run(new FrmMainWords());  
+                
+
+            }
+            Console.WriteLine("\nTotal Employee is : "+ EmployeeCount); 
+            Console.WriteLine("\nTotal Salaris : " + TotalSalaris);
+            Console.WriteLine("\n Average :" + AverageSalaris);
+            Console.WriteLine("\nMaximum" + MaxSalaries);   
+            Console.WriteLine("\nManimum" + MinSalaries);
+
+            Console.ReadKey();
         }
+       
     }
 }
