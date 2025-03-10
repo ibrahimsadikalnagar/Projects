@@ -15,3 +15,10 @@ E:\Repo\Projects\PracticeCRUD\PracticeCRUD\bin\Debug\DataConnections.pdb
 E:\Repo\Projects\PracticeCRUD\PracticeCRUD\obj\Debug\PracticeCRUD.FrmMainWords.resources
 E:\Repo\Projects\PracticeCRUD\PracticeCRUD\obj\Debug\PracticeCRUD.csproj.GenerateResource.cache
 E:\Repo\Projects\PracticeCRUD\PracticeCRUD\obj\Debug\PracticeCRUD.FrmAddEditWords.resources
+E:\Repo\Projects\PracticeCRUD\PracticeCRUD\bin\Debug\EntityFramework.dll
+E:\Repo\Projects\PracticeCRUD\PracticeCRUD\bin\Debug\EntityFramework.SqlServer.dll
+E:\Repo\Projects\PracticeCRUD\PracticeCRUD\bin\Debug\EntityFramework.xml
+E:\Repo\Projects\PracticeCRUD\PracticeCRUD\bin\Debug\EntityFramework.SqlServer.xml
+E:\Repo\Projects\PracticeCRUD\PracticeCRUD\obj\Debug\PracticeCRUD.UserControl1.resources
+E:\Repo\Projects\PracticeCRUD\PracticeCRUD\obj\Debug\PracticeCRUD.Form1.resources
+E:\Repo\Projects\PracticeCRUD\PracticeCRUD\obj\Debug\PracticeCRUD.Form2.resources

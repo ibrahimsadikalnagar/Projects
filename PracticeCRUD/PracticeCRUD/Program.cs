@@ -180,7 +180,8 @@ namespace PracticeCRUD
 
 
                 }
-                //  Application.Run(new FrmMainWords());  
+               
+                Application.Run(new Form1());  
 
 
                 Console.ReadKey();

@@ -39,6 +39,10 @@
             this.txtboxNewWord = new System.Windows.Forms.TextBox();
             this.txtboxTranslate = new System.Windows.Forms.TextBox();
             this.comboBoWordType = new System.Windows.Forms.ComboBox();
+            this.entityCommand1 = new System.Data.Entity.Core.EntityClient.EntityCommand();
+            this.entityCommand2 = new System.Data.Entity.Core.EntityClient.EntityCommand();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.userControl11 = new PracticeCRUD.UserControl1();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -143,11 +147,35 @@
             this.comboBoWordType.Size = new System.Drawing.Size(159, 24);
             this.comboBoWordType.TabIndex = 10;
             // 
+            // entityCommand1
+            // 
+            this.entityCommand1.CommandTimeout = 0;
+            this.entityCommand1.CommandTree = null;
+            this.entityCommand1.Connection = null;
+            this.entityCommand1.EnablePlanCaching = true;
+            this.entityCommand1.Transaction = null;
+            // 
+            // entityCommand2
+            // 
+            this.entityCommand2.CommandTimeout = 0;
+            this.entityCommand2.CommandTree = null;
+            this.entityCommand2.Connection = null;
+            this.entityCommand2.EnablePlanCaching = true;
+            this.entityCommand2.Transaction = null;
+            // 
+            // userControl11
+            // 
+            this.userControl11.Location = new System.Drawing.Point(528, 63);
+            this.userControl11.Name = "userControl11";
+            this.userControl11.Size = new System.Drawing.Size(334, 196);
+            this.userControl11.TabIndex = 11;
+            // 
             // FrmAddEditWords
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(562, 450);
+            this.ClientSize = new System.Drawing.Size(1007, 450);
+            this.Controls.Add(this.userControl11);
             this.Controls.Add(this.comboBoWordType);
             this.Controls.Add(this.txtboxTranslate);
             this.Controls.Add(this.txtboxNewWord);
@@ -161,6 +189,7 @@
             this.Controls.Add(this.lblTitle);
             this.Name = "FrmAddEditWords";
             this.Text = "FrmAddEditWords";
+            this.Load += new System.EventHandler(this.FrmAddEditWords_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -179,5 +208,9 @@
         private System.Windows.Forms.TextBox txtboxNewWord;
         private System.Windows.Forms.TextBox txtboxTranslate;
         private System.Windows.Forms.ComboBox comboBoWordType;
+        private System.Data.Entity.Core.EntityClient.EntityCommand entityCommand1;
+        private System.Data.Entity.Core.EntityClient.EntityCommand entityCommand2;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private UserControl1 userControl11;
     }
 }

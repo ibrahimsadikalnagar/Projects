@@ -38,5 +38,9 @@ namespace PracticeCRUD
 
         }
 
+        private void FrmAddEditWords_Load(object sender, EventArgs e)
+        {
+         
+        }
     }
 }
