@@ -13,12 +13,22 @@ using BusinessLayer;
 
 namespace PracticeCRUD
 {
+    class Book
+    {
+        public string Title { get; set; }
+        public decimal Price { get; set; }
+        public Book(string title, decimal price)
+        {
+            Title = title;
+            Price = price;
+        }
+    }
     internal class Program
     {
 
         public static void AddCountry()
         {
-           AddBusnissCountryLayer countryLayer = new AddBusnissCountryLayer();
+            AddBusnissCountryLayer countryLayer = new AddBusnissCountryLayer();
             countryLayer.Name = "Frankrjk";
             countryLayer.CountryCode = 313;
             countryLayer.CountryInfo = "Dicht bij Nederland";
@@ -28,11 +38,11 @@ namespace PracticeCRUD
             }
             else {
                 Console.WriteLine("The data is not saved");
-                    }
+            }
 
 
         }
-         static void FindData(int countryID)
+        static void FindData(int countryID)
         {
             AddBusnissCountryLayer countryfind = AddBusnissCountryLayer.Find(countryID);
             if (countryfind != null)
@@ -60,7 +70,7 @@ namespace PracticeCRUD
                 Console.WriteLine("Not Saved ");
             }
         }
-        static void  DeleteDate(int countryID)
+        static void DeleteDate(int countryID)
         {
             if (AddBusnissCountryLayer.DeleteDataCountry(countryID))
             {
@@ -68,7 +78,7 @@ namespace PracticeCRUD
             }
             else {
                 Console.WriteLine("Not Deleted");
-                    }
+            }
         }
         public static void ListCountries()
         {
@@ -80,7 +90,7 @@ namespace PracticeCRUD
                 Console.WriteLine($"{row["ID"]} , {row["Name"]} , {row["CountryCode"]}");
             }
         }
-        public static void  ifDataExit(string countryName)
+        public static void ifDataExit(string countryName)
         {
             if (AddBusnissCountryLayer.CheckIfDataExit(countryName))
             {
@@ -93,7 +103,7 @@ namespace PracticeCRUD
         }
         public static void FindByName(string name)
         {
-            AddBusnissCountryLayer Country =  AddBusnissCountryLayer.Find(name);
+            AddBusnissCountryLayer Country = AddBusnissCountryLayer.Find(name);
             if (Country != null)
             {
                 Console.WriteLine(Country.Name);
@@ -103,18 +113,48 @@ namespace PracticeCRUD
             }
             else
             {
-                Console.WriteLine("Country not found"); 
+                Console.WriteLine("Country not found");
             }
-            
+
         }
-        public static int  GetIDbyName(string name)
+        public static int GetIDbyName(string name)
         {
             int ID = AddBusnissCountryLayer.Find(name).CountryCode;
             return ID;
         }
 
+        // Practice with delegte 
+
+
+        delegate bool Predicte(Book book);
+        static bool checkIfGreaterThan30(Book book)
+        {
+            return (book.Price > 30M);
+               
+            
+        }
+         static int CountBooks(List<Book> books, Predicte predicte)
+        {
+            int count = 0;
+            foreach (Book book in books)
+            {
+                if (predicte(book))
+                    count++;
+
+            }
+            return count;
+        }
+
         static void Main(string[] args)
         {
+            List<Book> books = new List<Book>()
+            {
+                new Book("programing Advance" , 31.223M) ,
+                new Book("C++ Clean Code ", 22.44M) ,
+                new Book("Java" , 33.33M)
+            };
+            Console.WriteLine(CountBooks(books , checkIfGreaterThan30));
+
             // FindByName("USA");
             // Console.WriteLine(GetIDbyName("USA")); 
             //FindData(1008);
@@ -123,14 +163,14 @@ namespace PracticeCRUD
             // DeleteDate(1017);
             // ListCountries();
             // ifDataExit("USA");
-            DataTable ContactTable = new DataTable();
-            ContactTable.Columns.Add("ID", typeof(int));
-            ContactTable.Columns.Add("Name", typeof(string));
-            ContactTable.Columns.Add("Salaris", typeof(double));
+            /* DataTable ContactTable = new DataTable();
+             ContactTable.Columns.Add("ID", typeof(int));
+             ContactTable.Columns.Add("Name", typeof(string));
+             ContactTable.Columns.Add("Salaris", typeof(double));*/
 
 
             //Add rows 
-            ContactTable.Rows.Add(1, "Ibrahim Alnagar", 4300);
+            /*ContactTable.Rows.Add(1, "Ibrahim Alnagar", 4300);
             ContactTable.Rows.Add(2, "Tim Elbeed", 3500);
             ContactTable.Rows.Add(3, "Yossif Ibra", 3399);
             ContactTable.Rows.Add(4, "Ward Algeer", 4200);
@@ -180,13 +220,14 @@ namespace PracticeCRUD
 
 
                 }
-               
-                Application.Run(new Form1());  
+               */
+            // Application.Run(new Form1());  
 
 
-                Console.ReadKey();
-            }
+            Console.ReadKey();
         }
-       
     }
+
+       
+    
 }
