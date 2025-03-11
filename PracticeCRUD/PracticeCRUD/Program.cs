@@ -144,16 +144,31 @@ namespace PracticeCRUD
             }
             return count;
         }
+        public delegate void MyDelegte(string Massege);
+        static void PrintMessage(string msg)
+        {
+            Console.WriteLine("Message : " + msg);  
+        }
+
+        public static void PrintMessageUpperCase(string msg)
+        {
+            Console.WriteLine("Message Upper : " + msg.ToUpper());
+        }
 
         static void Main(string[] args)
         {
-            List<Book> books = new List<Book>()
+            /*MyDelegte del = PrintMessage;
+            del += PrintMessageUpperCase; 
+            del("Hello, delegete");
+            del("Ik wel een koffie ");
+            del("i start to parly understand delegete"); */
+            /*List<Book> books = new List<Book>()
             {
                 new Book("programing Advance" , 31.223M) ,
                 new Book("C++ Clean Code ", 22.44M) ,
                 new Book("Java" , 33.33M)
             };
-            Console.WriteLine(CountBooks(books , checkIfGreaterThan30));
+            Console.WriteLine(CountBooks(books , checkIfGreaterThan30));*/
 
             // FindByName("USA");
             // Console.WriteLine(GetIDbyName("USA")); 
@@ -221,7 +236,7 @@ namespace PracticeCRUD
 
                 }
                */
-            // Application.Run(new Form1());  
+             Application.Run(new Form2());  
 
 
             Console.ReadKey();
